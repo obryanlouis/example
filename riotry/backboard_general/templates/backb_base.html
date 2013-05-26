@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+{% block head_global %} {# ============================= HEAD GLOBAL BLOCK =================================== #}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>riotry | {{ first_name }}</title>
+       
+       {# NO META HERE YET - NEEDED FOR SEARCH ENGINES #}
+
+        <meta name="viewport" content="width=device-width">
+
+         {#  Place favicon.ico and apple-touch-icon.png in the root directory   #}
+        <link rel="apple-touch-icon" sizes="114x114" href="../static/ico/touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="../static/ico/touch-icon-72x72.png" />
+		<link rel="apple-touch-icon"href="../static/ico/touch-icon-iphone.png" />
+		<link rel="icon" type="image/x-icon" href="../static/ico/favicon.ico" />
+
+
+        <link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/backb_global.css">
+
+        <script src="{{ STATIC_URL }}javascripts/vendor/modernizr-2.6.2.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}javascripts/vendor/jquery-1.8.3.min.js"><\/script>')</script>
+
+{% endblock %}{# ============================================ HG END ===================================== #}
+
+{% block head_feature_request %}{# ===================== HEAD FEATURE BLOCK =============================== #}
+
+
+
+{% endblock %}{# ============================================= HF END ===================================== #}
+
+    </head>
+
+
+    <body>
+         <!-- [if lt IE 7] >
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif] -->
+
+{% block header %} {# ====================================== HEADER BLOCK ==================================== #}
+
+        {# @HEADER @BAND #}
+		<header class="band">
+
+			{# header @CONTAINER #}
+			<div class="header_wrapp">
+
+				<ul class="header_list">  {# LEFT HEADER  #}
+
+
+					{# TOGGLE BUTTON #}
+					<li>
+						<button class="nav_tog_button" data-type="navCallButton" > 
+						  <div class="more_options"></div> 
+						  <div class="more_options"></div> 
+						  <div class="more_options"></div> 
+						</button>
+					</li>
+
+					{# header @RIOTRY @LOGO #}
+					<li class="header_logo">riotry</li>  
+
+			        <li> {# header @ICON @INBOX #}
+			        	<a href="#" data-leary-noti="inboxDropdown" class="header_icons" title="inbox" aria-hidden="true" data-icon="&#x36;"></a>
+			        	<span class="screen_reader_text">inbox</span>
+
+			        	{# @INBOX @DROPDOWN CONTAINER #}
+			        	<div class="dropdown_container">
+
+				        	{# inbox DROPDOWN @BOX #}
+				        	<ol id="inboxDropdown" class="dropdown_inbox">
+
+								<li class="msg_mini_header">
+									<em>messages</em>
+									<a href="#" class="inbox_section_link">view all</a>
+								</li>
+
+								{# Dropdown @MSG PREVIEWS #}
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								<li class="msg_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<p>Hey, how are you doing? i really missed you yesterday</p>
+										<em class="msg_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+
+								 {# End 8msg Previews  #}
+								<li class="msg_mini_footer">
+									<a href="#" class="msg_section_link_bottom">view all</a>
+								</li>
+				        	</ol>
+				        	
+				        </div> {# End Dropdown  #}
+			        </li>
+
+
+
+			        <li> {# header @ICON @NOTES   #}
+			           	<a href="#" class="header_icons" data-leary-noti="notesDropdown" title="notes" aria-hidden="true"  data-icon="&#x26;"></a>
+			            <span class="screen_reader_text">notes</span>
+			            
+			             {# @NOTES @DROPDOWN CONTAINER  #}
+			        	<div class="dropdown_container">
+				             {# notes DROPDOWN @BOX  #}
+				            <ol id="notesDropdown" class="dropdown_notes" data-type="dropdown">
+								
+								 {# notes @MINI @FOOTER  #}
+								<li class="notes_mini_header">
+									<em>notes</em>
+									<a href="#" class="notes_section_link">view all</a>
+								</li>
+
+								 {# dropdown notes @PREVIEWS   #}
+								<li class="notes_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<p>Brenda Hernandez, <strong> Cecilia M. colon</strong> and 2 other people applaud your photo and stuff with stuff.</p>
+										<em class="notes_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+
+								<li class="notes_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<p><strong>Bonnie-Blue Delgado</strong> Updated her <strong>Paintings</strong> album</p>
+										<p class="user_content_preview">"The blue days I lay, remind me why i treat people this way."</p>
+										<em class="notes_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+								
+								 {# End 8notes Previews  #}
+								<li class="notes_mini_footer">
+									<a href="#" class="notes_section_link_bottom">view all</a>
+								</li>
+
+				            </ol>
+				        </div> {# End Dropdown   #}
+
+			        </li>
+
+			         {# header @ICON @CONNECTIONS   #}
+			        <li>
+	            		<a href="#" title="connections" class="header_icons" data-leary-noti="connectDropdown" aria-hidden="true" data-icon="&#x2d;"></a>
+	           			<span class="screen_reader_text">connect</span>
+	           			
+	           			 {# @CONNECTIONS @DROPDOWN CONTAINER  #}
+			        	<div class="dropdown_container">
+
+				        	 {# inbox DROPDOWN @BOX  #}
+				        	<ol id="connectDropdown" class="dropdown_con">
+
+								<li class="con_mini_header">
+									<em>connections</em>
+									<a href="#" class="con_section_link">view all</a>
+								</li>
+
+								 {# Dropdown @CONNECTION PREVIEWS  #}
+								<li class="con_preview">
+									<a href="#">
+										<img src="http://placehold.it/55x55" class="thumbnail_basic" />
+										<h6>senders name</h6>
+										<button class="deny_connection">deny</button>
+										<button class="accept_connection">accept</button> slider
+										<em class="con_time_dropdown">Wednesday, Sept 12, 2012</em>
+									</a>
+								</li>
+
+								 {# End 8msg Previews  #}
+								<li class="con_mini_footer">
+									<a href="#" class="con_section_link_bottom">view all</a>
+								</li>
+				        	</ol>
+				        	
+				        </div> {# End Dropdown  #}
+
+	          		</li> {# CONNECTION TRIGGER END   #}
+
+
+				</ul> {# left header end  #}
+
+
+				<ul class="header_list"  data-type="restOfHeader"> {#  RIGHT HEADER   #}
+
+				<!--	  {# header @ICON @SEARCH   #}
+					<li  class="header_search_icon">
+						<a title="search" aria-hidden="true" data-icon="&#x2e;"></a>
+						<span class="screen_reader_text">search</span>
+					</li>
+				-->
+
+					 {# header @USER @NAME   #}
+		            <li class="header_user_account_options">
+		              	<a href="#" data-leary-basic="userDropdown" class="users_header_name">{{full_name}}</a>
+
+			             {# account @DROPDOWN  #}
+						<div class="dropdown_container_account">
+			              		<ol id="userDropdown" class="dropdown_account">
+
+				              			<li><a href="/profile/">view profile</a></li>
+				              			<li><a href="/" class="home_line">home</a></li>
+				              			<li><a href="#">account</a></li>
+				              			<li><a href="/upload_text" class="upload_line">upload</a></li>
+				              			<li><a href="/logout/">logout</a></li>
+
+			              		</ol>
+			            </div>  {# end dropdown  #}
+
+		       		</li>
+
+
+	            </ul> {#  Collapses when .mobilOn comes in   #}
+
+			</div> {#  end header_wrapp  #}
+
+		</header> {# end Band  #}
+
+
+{% endblock %} {# ========================================== H END ==================================== #}
+
+{% block mobile_search_home %} {# ================== MOBILE SEARCH AND HOME =========================== #}
+		 
+		 {# @MOBILE HOME BAND  #}
+		<div class="mobile_search_home_band" data-type="search_home_band">
+			 {# HOME ICON  #} 
+			<button class="mobile_home_button">
+				<a href="#" class="header_icons_home" title="home" aria-hidden="true" data-icon="&#x3b;"></a>
+				<span class="screen_reader_text">home</span>
+			</button>
+			 {# @SEARCH BAR  #}
+			<input class="mobile_header_search" type="search" placeholder="search" />
+
+	    </div>
+
+ {% endblock %} {# ========================================== MS&home END ==================================== #}
+	     
+
+
+{% block page_wrapp_div %}{# =========================== PAGE WRAPP DIV ================================ #}
+
+ 		 {# MAIN @PAGE @WRAPP   #}
+		<div class="page_wrapp">
+
+{% endblock %}{# ============================================ PW END ==================================== #}
+
+
+			 {# @UTILITIES @SECTION  #}
+{% block utility_space %}{# ============================= UTILITY SPACE ================================ #}
+			
+			<section class="utility_space">
+
+				{# @PLUS UPLOAD BUTTON #}
+				<button class="quick_upload_button" data-type="uploadDropdownTrigger">
+					<a href="#" class="plus_icon" title="home" aria-hidden="true" data-icon="&#x3a;"></a>
+					<span class="screen_reader_text">upload to library</span>
+				</button>
+
+					{# UPLOAD @DROPDOWN CONTAINER #}
+					<div class="dropdown_box" data-type="uploadButtonDropdown">
+
+						{# @UPLOAD TEXT BUTTON #}
+						<button title="upload text"  data-reveal-id="textUploadModal">
+							 <span aria-hidden="true" data-icon="&#x3c;"></span>
+							 <span class="screen_reader_text">upload text</span>
+						</button>
+
+						{# @UPLOAD IMAGES BUTTON #}
+						<button class="upload_media_button" data-trigger-browse-id="id_images" title="upload image">
+							 <span aria-hidden="true" data-icon="&#x40;"></span>
+							 <span class="screen_reader_text">upload image</span>
+						</button>
+
+						{# @UPLOAD VIDEO BUTTON #}
+						<button class="upload_media_button" data-trigger-browse-id="id_video_file" title="upload video">
+							 <span aria-hidden="true" data-icon="&#x3f;"></span>
+							 <span class="screen_reader_text">upload video</span>
+						</button>
+
+						{# @UPLOAD VIDEO BUTTON #}
+						<button class="upload_media_button" data-trigger-browse-id="id_audio_file" title="upload audio">
+							<span aria-hidden="true" data-icon="&#x42;"></span>
+							<span class="screen_reader_text">upload audio</span>
+						</button>
+					</div>
+	
+			
+			</section>
+
+{% endblock %}{# =========================================== US END ===================================== #}
+
+
+
+
+{% block nav %}{# ========================================== NAV END =================================== #}
+			 {# @NAV NETWORK @BAR   #}
+			<nav data-type="navCollapseControl">
+
+
+			<div data-trigger-hover-toggle="id_change_profile_button">
+				{# @PROFILE PIC #}
+		      <img src="{{ MEDIA_URL }}{{ profile_pic_square_200 }}" alt="{# Content #}">
+	      		{# BUTTON TRIGGER UPLOAD @PROFILE PIC #}
+		          <button class="upload_profile_picture_button" data-trigger-browse-id="id_profile_pic" id="id_change_profile_button">change</button>
+		    </div>
+		          <a href="#" class="users_name">
+		            {{ full_name }}
+		          </a>
+
+		          <ul class="backb_navigation_list">
+		            <h5>network</h5>
+		                <li>
+		                  <span title="feeds" aria-hidden="true" data-icon="&#x23;"></span>
+		                  <a href="#">feeds</a>
+		                </li>
+		                <li>
+		                  <span title="inbox" aria-hidden="true" data-icon="&#x36;"></span>
+		                  <a href="#">inbox</a>
+		                </li>
+		                <li>
+		                  <span title="notes" aria-hidden="true" data-icon="&#x26;"></span>
+		                  <a href="#">notes</a>
+		                </li>
+		                <li>
+		                  <span title="settings" aria-hidden="true" data-icon="&#x30;"></span>
+		                  <a href="#">settings</a>
+		                </li>
+		                <li>
+		                  <span title="scores" aria-hidden="true" data-icon="&#x2c;"></span>
+		                  <a href="#">scores</a>
+		                </li>
+
+		            <h5>profile</h5>
+		                <li>
+		                  <span title="me" aria-hidden="true" data-icon="&#x32;"></span>
+		                  <a href="#">me</a>
+		                </li>
+		                <li>
+		                  <span title="connect" aria-hidden="true" data-icon="&#x2d;"></span>
+		                  <a href="#">connect</a>
+		                </li>
+
+		            <h5>content</h5>
+		                <li data-leary-list="brandsList">
+		                  <span title="brands" aria-hidden="true" data-icon="&#x21;"></span>
+		                  <a href="#">
+		                    brands
+		                    <div id="brandsCaret"></div>
+		                  </a>
+		                
+		                </li>
+		                 {#  @BRANDS @DROPDOWN LIST  #}
+		                <ul class="dropdownList" id="brandsList">
+		                      <li><a href="">brand1</a></li>
+		                      <li><a href="">brand2</a></li>
+		                      <li><a href="">brand3</a></li>
+		                      <li><a href="">brand4</a></li>
+		                    </ul> 
+		                <li id="doingsListTrigger" data-leary-list="doingsList">
+		                  <span title="do&iuml;ngs" aria-hidden="true" data-icon="&#x22;"></span>
+		                  <a href="#">
+		                    do&iuml;ngs
+		                    <div id="doingsCaret"></div>
+		                  </a>
+		                </li>
+		                 {#  @DOINGS @DROPDOWN LIST  #}
+		                  <ul class="dropdownList" id="doingsList">
+		                    <li><a href="">category1</a></li>
+		                    <li><a href="">category2</a></li>
+		                    <li><a href="">category3</a></li>
+		                    <li><a href="">category4</a></li>
+		                  </ul> 
+		                <li>
+		                  <span title="library" aria-hidden="true" data-icon="&#x24;"></span>
+		                  <a href="#">library</a>
+		                </li>
+		          </ul>
+		    </nav>
+{% endblock %}{# ============================================ N END ====================================== #}
+
+{% block feature %}{# ================================== FEATURE BLOCK =================================== #}
+
+			<aside class="theBox">
+
+			</aside>
+
+{% endblock %}{# ============================================ F END ========================================= #}
+
+
+{% block global_modals %}{# ========================== GLOBAL MODAL BLOCK =================================== #}
+	
+
+	{# @TEXT MODAL #}
+	<div id="textUploadModal" class="reveal_modal_upload_text">
+		
+		{# @TEXT ICON #}
+		<span aria-hidden="true" data-icon="&#x3c;"></span>
+		<span class="screen_reader_text">upload text</span>
+
+		{# @TEXT EDITOR #}
+		<form id="text_upload" enctype="multipart/form-data">
+
+			<div class="text_upload_form">
+				{{ text_form }}
+			</div>
+
+
+			{# @AJAXED SUBMIT #}
+			<input class="submit_button" type="submit" name="text_uploading" value="save">
+			<button class="cancel_button"> cancel </button>
+		</form>
+		<a class="close-reveal-modal">&#215;</a>
+	</div> {# modal END #}
+	
+
+	{# =================================@Uploaded IMAGES ============================== #}
+
+	<div id="imagesUploadModal" class="reveal_modal_upload_images"> 
+
+		<form id="image_info_formset">
+			{% if images_and_formset %}
+				{% for image,form in images_and_formset %}
+				<div class="item_style_cover">
+					<div class="formset_container">
+					    <img src="{{ MEDIA_URL }}{{image}}">
+					    {{form}}
+					    <div class="item_util_bar"></div>
+				    </div>
+				</div>	
+				{% endfor %}
+			{% endif %}
+
+			
+			<input class="submit_button" name="images_uploaded_submit" type="submit" name="" value="save">
+			<button class="cancel_button"> cancel </button>	
+		</form>
+		<a class="close-reveal-modal">&#215;</a>
+
+	</div> {# modal END #}
+	
+
+	{# =================================@Uploaded VIDEO ============================== #}
+
+	<div id="videoUploadModal" class="reveal_modal_upload_video"> 
+		<form id="video_info_form">
+		
+			
+				<div class="item_style_cover">
+					<div class="formset_container">
+					    <img src="{{ MEDIA_URL }}{{ video_icon }}">
+					    {{ video_info_form }}
+					    <div class="item_util_bar"></div>
+				    </div>
+				</div>	
+
+			<input class="submit_button" name="video_uploaded_submit" type="submit" value="save">
+			<button class="cancel_button"> cancel </button>
+		</form>
+		<a class="close-reveal-modal">&#215;</a>
+
+	</div> {# modal END #}
+
+	{# =================================@Uploaded AUDIO ============================== #}
+
+	<div id="audioUploadModal" class="reveal_modal_upload_audio"> 
+		<form id="audio_info_form">
+				<div class="item_style_cover">
+					<div class="formset_container">
+					    <img src="{{ MEDIA_URL }}{{audio_icon}}">
+					    {{ audio_info_form }}
+
+					    <div class="item_util_bar"></div>
+				    </div>
+				</div>	
+
+			<input class="submit_button" name="audio_uploaded_submit" type="submit" value="save">
+			<button class="cancel_button"> cancel </button>
+		</form>
+		<a class="close-reveal-modal">&#215;</a>
+	</div> {# modal END #}
+	
+	{# =================================@SUCCESS MODAL ============================== #}
+	<!-- FOR WHEN THE USER NEEDS TO GET NOTICED OF SUCCES
+	<div id="successModal">
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+	-->
+
+
+
+{% endblock %}{# =========================================== GM END ========================================= #}
+
+
+{% block feature_modals %}{# ======================= FEATURE MODAL BLOCK ================================== #}
+
+
+{% endblock %}{# =========================================== FM END ========================================= #}
+
+
+{% block invisible_forms_global %}
+	<!-- add a section with a style of display none 
+	because all that goes here will never be visible --> 
+
+	<section style="display: none;">
+
+		{# IMAGES FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ image_form }}
+			<input type="submit" name="id_images" id="image_uploading">
+		</form>
+
+		{# PROFILE FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ profile_pic_form }}
+			<input type="submit" name="id_profile_pic"> 
+		</form>
+
+		{# VIDEO FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ video_form }}
+			<input type="submit" name="id_video_file" id="video_uploading">
+		</form>
+
+		{# AUDIO FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ audio_form }}
+			<input type="submit" name="id_audio_file" id="audio_uploading">
+		</form>
+
+	</section>
+{% endblock %}
+
+
+{% block js_global_loads %}{# =========================== JS GLOBAL BLOCK ========================================= #}
+
+        <script src="{{ STATIC_URL }}javascripts/plugins_functions.js"></script>
+        <script src="{{ STATIC_URL }}javascripts/backb_global.js"></script>
+
+         {#  Google Analytics: change UA-XXXXX-X to be your site's ID.   #}
+         <!-- 
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    	  -->
+{% endblock %}{# ========================================== JSG END ============================================== #}
+
+{% block js_feature_loads %}{# ======================== JS FEATURE BLOCK ========================================= #}
+
+{% endblock %}{# ========================================== JSF END ========================================= #}
+
+{% block toggle_statements_global %}
+		
+	 
+			<script type="text/javascript">
+			$(function() {
+				{% if toggle == "image_info_modal" %}
+					$('#imagesUploadModal').reveal(); 
+
+				{% elif toggle == "video_info_modal" %}
+					$('#videoUploadModal').reveal();   
+					
+				
+				{% elif toggle == "audio_info_modal" %}
+					$('#audioUploadModal').reveal();    
+					
+				{% endif %}  
+			});
+			</script>
+		
+		
+	<!--<button data-reveal-id="imagesUploadModal">did the images upload?</button>
+		<button data-reveal-id="videoUploadModal">did the video upload?</button>
+		<button data-reveal-id="audioUploadModal">did the audio upload?</button> -->
+		
+	
+{%endblock%}
+
+    </body>
+</html>

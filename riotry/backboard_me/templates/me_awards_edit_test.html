@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Me/Awards Edit Template</title>   
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        <p> Edit the award below, then hit submit: </p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p><input type="text" name="award_title" value='{{item.award_title}}' </p>
+            <p><input type="text" name="link" value='{{item.link}}' </p>
+            <p><select name="award_or_mention">
+                <option value="ME">Mention</option>
+                <option value="AW">Award</option>
+            </select></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+    </body>
+</html> 

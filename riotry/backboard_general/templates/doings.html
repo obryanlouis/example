@@ -1,0 +1,138 @@
+{% extends "backb_base.html" %}
+
+
+{% block head_feature_request %}{# ===================== HEAD FEATURE BLOCK =============================== #}
+
+	<link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/doings.css">
+
+
+{% endblock %}{# ============================================= HF END ===================================== #}
+
+    </head>
+
+
+    <body>
+         <!-- [if lt IE 7] >
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif] -->
+
+
+{% block feature %}{# ================================== FEATURE BLOCK =================================== #}
+
+			<aside class="feature_wrapp"><!--column size-->
+
+				<div class="doigns_row">
+					
+					<div class="doings_item_container">
+
+						<div class="item_box_frame">
+
+							<div class="image_container">
+								<img src="http://placehold.it/200x200">
+							</div>
+
+							<div class="info_container">
+								<h6 class="Item_title">Title</h6>
+								<button class="item_options">options</button>
+							</div>
+
+						</div>
+						
+						<div class="doings_item_forms">
+
+							<input type='text' placeholder="title">
+							<textarea placeholder="description"></textarea>
+						</div>
+
+
+						<div class="doings_item_buttons">
+							
+							<button>edit</button><!--turns into save -->
+							<!--  only on edit toggle <button>delete</button> -->
+
+
+						</div>
+
+					</div> 
+
+				</div>
+			</aside>
+
+{% endblock %}{# ============================================ F END ========================================= #}
+
+
+{% block feature_modals %}{# ======================= FEATURE MODAL BLOCK ================================== #}
+
+
+{% endblock %}{# =========================================== FM END ========================================= #}
+
+
+{% block invisible_forms_global %}{# =================== INVISIBLE FORM BLOCK ================================ #}
+	<!-- add a section with a style of display none 
+	because all that goes here will never be visible --> 
+
+	<section style="display: none;">
+
+		{# IMAGES FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ image_form }}
+			<input type="submit" name="id_images" id="image_uploading">
+		</form>
+
+		{# PROFILE FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ profile_pic_form }}
+			<input type="submit" name="id_profile_pic"> 
+		</form>
+
+		{# VIDEO FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ video_form }}
+			<input type="submit" name="id_video_file" id="video_uploading">
+		</form>
+
+		{# AUDIO FORMS #}
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{ audio_form }}
+			<input type="submit" name="id_audio_file" id="audio_uploading">
+		</form>
+
+	</section>
+{% endblock %}{# ==========================================IF END ====================================== #}
+
+{% block js_feature_loads %}{# ======================== JS FEATURE BLOCK ========================================= #}
+
+{% endblock %}{# ========================================== JSF END ========================================= #}
+
+{% block toggle_statements_global %}{# ================= DJANGO TOGGLE GLOBAL ===================================== #}
+		
+	 
+			<script type="text/javascript">
+			$(function() {
+				{% if toggle == "image_info_modal" %}
+					$('#imagesUploadModal').reveal(); 
+
+				{% elif toggle == "video_info_modal" %}
+					$('#videoUploadModal').reveal();   
+					
+				
+				{% elif toggle == "audio_info_modal" %}
+					$('#audioUploadModal').reveal();    
+					
+				{% endif %}  
+			});
+			</script>
+		
+		
+	<!--<button data-reveal-id="imagesUploadModal">did the images upload?</button>
+		<button data-reveal-id="videoUploadModal">did the video upload?</button>
+		<button data-reveal-id="audioUploadModal">did the audio upload?</button> -->
+		
+{%endblock%}
+
+    </body>
+</html>

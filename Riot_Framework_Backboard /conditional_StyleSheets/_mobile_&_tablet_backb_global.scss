@@ -1,0 +1,294 @@
+
+//============================================
+// BOTH TABLET AND MOBILE
+// ===========================================
+
+// HOME AND SEARCH BAND 
+// ===========================================
+// alter here for global (except for desktop) positions
+// toggled by navcontroTogBut
+
+div.mobile_search_home_band {
+	@extend .sg-mobile-home-band;
+	display:none;
+	height: 34px;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	z-index: 50;
+	
+	//@SEARCH 
+	input.mobile_header_search {
+		@extend .fe-search-basic-input;
+		@include columns(5);
+		@include omega;
+		margin-top: 2px;
+	}
+
+	//HOME @BUTTON 
+	//Not icon
+	button.mobile_home_button {
+		@extend .fe-basic-invisible-square-button;
+		//border-:1px solid $primary-border-color;
+		position: absolute;
+		left:0%;
+		top:-4px;
+		&:hover {
+			@extend .fe-basic-invisible-square-button-hover;
+		}
+	}
+}
+
+
+
+
+
+
+//============================================
+// MOBILE ON STYLES (480px and under)
+// ===========================================
+
+//activated when enquire.js plugin is activated 
+//(on backb_global.js) to add a class of mobileOn
+//to the body of backb_base, this effect tricles
+//down any feature inhereting the backb_base.html 
+
+.mobileOn {
+	
+	// @HEADER redefine
+	// ===========================================
+	 ul.header_list{
+	 	height: 40px !important;
+
+	 		//Redefining Header icons positions
+	 		//only use important when its a 
+	 		//conditional stylesheet (like the one you are on)
+		 	& > li  {
+			 		float: left !important;
+					width: 29px !important;
+					margin-left: 26px !important;
+					padding: 0 !important;
+			
+
+					&.header_logo { 
+						float: left !important;
+						margin: 3px 25px 0 -30px !important;
+					}
+		}
+	}
+
+
+
+	// NAV 	@TOGGLE @BUTTON
+	// ===========================================
+	button.nav_tog_button {
+	  //TOGGLE NAV BUTTON
+	  @extend .fe-basic-invisible-square-button;
+	  border-color: transparent $primary-border-color transparent transparent;
+	  display: none;
+	  position:absolute;
+	  left: -16%;
+	  top:0;
+	  padding: 2px 15px 0 10px;
+
+	  //MORE OPTIONS ICON
+	  div.more_options{  
+	  	@extend .sg-shapes-more-options-icon;
+	  }
+	}
+
+	// HOME AND SEARCH BAND 	
+	// ===========================================
+	div.mobile_search_home_band {
+		//position: absolute;
+		display:inline-block;
+		border-bottom: 1px solid $primary-border-color;
+		height: 42px;
+		min-width: 400px;
+		@include row;
+		position:relative;
+		
+		//SEARCH
+		input.mobile_header_search {
+			@extend .fe-search-basic-input;
+			display: inline-block;
+			float:left;
+			margin: 6px auto 0 13%;
+			width: 290px;
+			//margin-top: 6px;
+		}
+	}
+
+	//@HOME ICON
+	a.header_icons_home {
+		@extend .sg-icon-anchor-header;
+		//margin-left:-35px;
+		width: 100%;
+		height: 100%;
+		z-index: 60;
+		&:before {
+			line-height:2em;	
+		}
+		&:hover {
+			@extend .sg-icon-hover-header;
+			background:inherit;	
+		}
+
+		button.quick_upload_button2 { 
+		//@extend .fe-basic-invisible-button;
+		display:none;
+		}
+	}
+
+}
+
+
+
+
+
+
+//============================================
+// TABLET ON STYLES (min-width:480) and (max-width:787)
+// ===========================================
+
+
+body.tabletOn {
+
+
+	// RE-Adjusting widths
+	//so mobile and tablets dont overflow
+	// ===========================================
+	.header_band {
+		width: 100% !important;
+	
+	}
+	.header_wrapp {
+		width: 100% !important;
+		
+	}
+
+	section.utility_space {
+		width: 100% !important;
+
+	}
+
+	div.page_wrapp {
+		width: 100% !important;
+		
+	}
+
+
+
+	// @HEADER redefine
+	// ===========================================
+
+	 ul.header_list{
+
+	 	height: 40px !important;
+
+		 	& > li  {
+			 		float: left !important;
+					width: 29px !important;
+					margin-left: 30px !important;
+					padding: 0 !important;
+			
+
+					&.header_logo { 
+						float: left !important;
+						margin: 3px 25px 0 -30px !important;
+					}
+			}
+	}
+
+	//TOGGLE NAV BUTTON
+	button.nav_tog_button {
+	@extend .fe-basic-invisible-square-button;
+	  display: none;
+	  position: absolute;
+	  top: 43px;
+	  left: 0%;
+	  z-index: 99;
+	 
+	  //MORE OPTIONS ICON
+	  div.more_options{
+	    border: 1px inset;
+	    border-color: $primary-border-color;
+	    background:$primary-border-color;
+	    margin: 2px auto 0 auto;
+	    width: 20px;
+	    height: 4px;
+
+	  }
+
+	}
+
+	// HOME AND SEARCH BAND 	
+	// ===========================================
+	div.mobile_search_home_band {
+		//position: absolute;
+		border-bottom: 1px solid $primary-border-color;
+		height: 42px;
+		min-width: 868px;
+		@include row;
+		position: relative;
+		
+
+		
+		input.mobile_header_search {
+			@extend .fe-search-basic-input;
+			@include columns(5);
+			@include offset(19);
+			margin-top: 6px;
+		}
+
+
+		//@HOME @BUTTON
+		//not icon
+		button.mobile_home_button {
+			@extend .fe-basic-invisible-square-button;
+			position: absolute;
+			left:8%;
+			top:0px;
+			&:hover {
+			@extend .fe-basic-invisible-square-button-hover;
+			}
+		}
+
+		//@HOME ICON
+		a.header_icons_home {
+		@extend .sg-icon-anchor-header;
+			//margin-left:-35px;
+			width: 100%;
+			height: 100%;
+			z-index: 60;
+			&:hover {
+				@extend .sg-icon-anchor-hover-header;
+				background:inherit;	
+			}
+		}
+	}
+
+	button.quick_upload_button2 { 
+		@extend .fe-basic-invisible-button;
+		//display:none;
+		@include columns(2);
+		margin: 0 0 0 0;
+		height: 37px;
+				
+		&:hover { 
+			@extend .fe-basic-button-hover;
+		}
+		&:active { 
+			@extend .fe-basic-button-active;
+		}
+
+		a.plus_icon { 
+			@extend .es-header-icon-anchor;
+			color: lighten($icon-color,45%);
+			float: center;
+			padding-top: 10px;
+		}
+	}
+}
+
+

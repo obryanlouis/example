@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Me/Websites Edit Template</title>   
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        <p> Edit the title below, then hit submit: </p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p><input type="text" name="job_title" value='{{item.job_title}}' </p>
+            <p><input type="text" name="organization" value='{{item.organization}}' </p>
+            <p><input type="text" name="website" value='{{item.website}}' </p>
+            <p><input type="text" name="description" value='{{item.description}}' </p>
+            <p><input type="text" name="location" value='{{item.location}}' </p>
+            <p><input type="text" name="start_date" value='{{item.start_date|date:"SHORT_DATE_FORMAT"}}' </p>
+            <p><input type="text" name="end_date" value='{{item.end_date|date:"SHORT_DATE_FORMAT"}}' </p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+    </body>
+</html> 

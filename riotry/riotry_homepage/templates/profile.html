@@ -1,0 +1,15 @@
+<html>
+	<head>
+	</head>
+	<body>
+		{% block content %}
+  		<p> Welcome to your Profile Page </p>
+        <img src=../media/{{profilepic}}/>
+        <img src=../media/{{profilepic200}}/>
+        <img src=../media/{{thumbnail}}
+    	<p> Name: {{ username }} </p>
+    	<a href = "/logout/">logout</a>
+    	<a href = "/password/change/">change your password</a>
+    	{% endblock %}
+    </body>
+</html>

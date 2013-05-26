@@ -1,0 +1,1929 @@
+/* line 32, ../../../../Riot Framework Backboard /_skeleton.scss */
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+
+/* line 17, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 13, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_html5.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 20, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_html5.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/* line 26, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_html5.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 32, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_html5.scss */
+[hidden] {
+  display: none; }
+
+/* line 2, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_base.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 16, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_base.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif; }
+
+/* line 21, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_base.scss */
+body {
+  margin: 0; }
+
+/* line 4, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_links.scss */
+a:focus {
+  outline: thin dotted; }
+/* line 10, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_links.scss */
+a:hover, a:active {
+  outline: 0; }
+
+/* line 3, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+h1 {
+  font-size: 2em; }
+
+/* line 8, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 14, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/* line 19, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+dfn {
+  font-style: italic; }
+
+/* line 24, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 33, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/* line 39, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/* line 46, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/* line 51, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+small {
+  font-size: 75%; }
+
+/* line 58, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 65, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+sup {
+  top: -0.5em; }
+
+/* line 69, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_typography.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 2, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_embedded.scss */
+img {
+  border: 0; }
+
+/* line 8, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_embedded.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 3, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_figures.scss */
+figure {
+  margin: 0; }
+
+/* line 3, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 9, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 19, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+/* line 31, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+button,
+input {
+  line-height: normal; }
+
+/* line 44, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 53, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+/* line 58, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 66, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 78, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none; }
+
+/* line 84, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 89, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_forms.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 3, ../../../../../Documents/Front Frameworks/Plugins/normalize-plugin-master/normalize/normalize/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 155, ../../../../Riot Framework Backboard /_styleGuide.scss */
+[data-icon]:before {
+  font-family: 'rioticons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 176, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-hr-basic {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+/* line 188, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-riotry-logo-nav, header.band div.header_wrapp ul.header_list > li.header_logo {
+  color: #8d9092;
+  letter-spacing: -.5px;
+  font-weight: bold;
+  font-size: 1.3125em; }
+
+/* line 193, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-icon-anchor-header, .es-header-icon-anchor, body.tabletOn button.quick_upload_button2 a.plus_icon, header.band div.header_wrapp ul.header_list > li a.header_icons, section.utility_space button.quick_upload_button a.plus_icon, section.utility_space div.dropdown_box button span, .mobileOn a.header_icons_home, body.tabletOn div.mobile_search_home_band a.header_icons_home, header.band div.header_wrapp ul.header_list > li.header_search_icon {
+  font-size: 1em;
+  color: #666055;
+  text-decoration: none; }
+
+/* line 198, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-icon-hover-anchor-header, .es-header-icon-anchor-hover, header.band div.header_wrapp ul.header_list > li a.header_icons:hover, header.band div.header_wrapp ul.header_list > li a.header_icons:active {
+  color: #13120f;
+  background-color: #e6e6e6; }
+
+/* line 203, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-user-options-header, header.band div.header_wrapp ul.header_list > li.header_user_account_options > a {
+  font-size: 0.9375em;
+  text-decoration: none;
+  color: #646565; }
+
+/* line 208, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-user-options-hover-header, header.band div.header_wrapp ul.header_list > li.header_user_account_options > a:hover {
+  background: #f9c429; }
+
+/* line 216, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-mobile-home-band, div.mobile_search_home_band {
+  position: absolute;
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 230, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-user-name-nav, nav a.users_name, nav a.visited {
+  font-size: 0.9375em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #646565; }
+
+/* line 236, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-user-name-hover-nav, nav a.users_name:hover, nav a.users_name:active, nav a.visited:hover, nav a.visited:active {
+  color: #b1b1b1; }
+
+/* line 241, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-section-name-nav, nav ul.backb_navigation_list h5 {
+  font-size: 0.625em;
+  text-transform: uppercase;
+  color: #cbc3b9; }
+
+/* line 248, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-list-box-nav {
+  color: #494233; }
+
+/* line 251, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-list-box-nav-hover, nav ul.backb_navigation_list li:hover {
+  background-color: #f4f4ef;
+  color: white;
+  -webkit-border-radius: 2px 2px;
+  -moz-border-radius: 2px / 2px;
+  border-radius: 2px / 2px; }
+
+/* line 258, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-icon-nav, nav ul.backb_navigation_list li span {
+  font-size: 0.75em;
+  color: inherit; }
+
+/* line 264, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-network-links-nav, nav ul.backb_navigation_list li a {
+  font-size: 0.9375em;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none; }
+
+/* line 272, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-network-sub-links-nav, .dd-nav-list-link, nav ul.backb_navigation_list ul.dropdownList li a {
+  color: #85785d;
+  font-weight: normal;
+  background-color: none; }
+
+/* line 283, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-info-area-basic, .sg-info-area-link, .dd-mini-header-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_header a.inbox_section_link, div.dropdown_container ol.dropdown_notes li.notes_mini_header a.notes_section_link, div.dropdown_container ol.dropdown_con li.con_mini_header a.con_section_link, .dd-mini-footer-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer a.msg_section_link_bottom, div.dropdown_container ol.dropdown_notes li.notes_mini_footer a.notes_section_link_bottom, div.dropdown_container ol.dropdown_con li.con_mini_footer a.con_section_link_bottom, .dd-mini-header-section-description, div.dropdown_container ol.dropdown_inbox li.msg_mini_header em, div.dropdown_container ol.dropdown_notes li.notes_mini_header em, div.dropdown_container ol.dropdown_con li.con_mini_header em {
+  font-size: 0.75em;
+  line-height: 1;
+  font-weight: regular;
+  color: #c9c2b2; }
+
+/* line 289, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-info-area-link, .dd-mini-header-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_header a.inbox_section_link, div.dropdown_container ol.dropdown_notes li.notes_mini_header a.notes_section_link, div.dropdown_container ol.dropdown_con li.con_mini_header a.con_section_link, .dd-mini-footer-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer a.msg_section_link_bottom, div.dropdown_container ol.dropdown_notes li.notes_mini_footer a.notes_section_link_bottom, div.dropdown_container ol.dropdown_con li.con_mini_footer a.con_section_link_bottom {
+  font-weight: bold;
+  border: none;
+  color: #9f9276;
+  text-decoration: none; }
+
+/* line 296, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-info-area-hover-link, .dd-mini-header-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_header a.inbox_section_link, div.dropdown_container ol.dropdown_notes li.notes_mini_header a.notes_section_link, div.dropdown_container ol.dropdown_con li.con_mini_header a.con_section_link, .dd-mini-footer-section-link-hover, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer a.msg_section_link_bottom:hover, div.dropdown_container ol.dropdown_notes li.notes_mini_footer a.notes_section_link_bottom:hover, div.dropdown_container ol.dropdown_con li.con_mini_footer a.con_section_link_bottom:hover {
+  color: #dedad0;
+  background-color: white; }
+
+/* line 302, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-dropdown-basic, .dd-basic-box, div.dropdown_container_account ol.dropdown_account, .dd-msg-notes-basic-box, div.dropdown_container ol.dropdown_inbox, div.dropdown_container ol.dropdown_notes, div.dropdown_container ol.dropdown_con {
+  z-index: 99;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  overflow: auto;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px; }
+
+/* line 312, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-dropdown-bottom-divider, .dd-dropdown-bottom-divider, div.dropdown_container_account ol.dropdown_account li > a.home_line, div.dropdown_container_account ol.dropdown_account li > a.upload_line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 317, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-trigger-active-dropdown, .active_dropdown:before {
+  color: #f9c429; }
+
+/* line 322, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-drop-basic-links, .dd-basic-anchor-element, div.dropdown_container_account ol.dropdown_account li > a, .dd-mini-header-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_header a.inbox_section_link, div.dropdown_container ol.dropdown_notes li.notes_mini_header a.notes_section_link, div.dropdown_container ol.dropdown_con li.con_mini_header a.con_section_link {
+  font-size: 0.9375em;
+  text-decoration: none;
+  color: #646565;
+  font-weight: bold; }
+
+/* line 328, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-drop-basic-links-hover, .dd-basic-anchor-element-hover, div.dropdown_container_account ol.dropdown_account li > a:hover {
+  font-size: 0.9375em;
+  text-decoration: none;
+  color: white;
+  background-color: #f4f4ef; }
+
+/* line 336, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-anchor-box-dropdown, .dd-hori-msg-content-box-link, div.dropdown_container ol.dropdown_inbox li.msg_preview a, div.dropdown_container ol.dropdown_con li.con_preview a, .dd-hori-notes-content-box-link, div.dropdown_container ol.dropdown_notes li.notes_preview a {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 340, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-anchor-box-dropdown-hover, .dd-hori-notes-content-box-link-hover {
+  background: #cccccc; }
+
+/* line 345, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-msg-sender-name, .dd-msger-name, div.dropdown_container ol.dropdown_inbox li.msg_preview a h6, div.dropdown_container ol.dropdown_con li.con_preview a h6 {
+  font-size: 0.8125em;
+  color: #646565;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/* line 355, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-msg-content-preview, .sg-notes-preview, .sg-notes-user-content-preview, .dd-notes-user-content-preview, div.dropdown_container ol.dropdown_notes li.notes_preview a p.user_content_preview, .dd-msg-content-preview, .dd-notes-user-content, .dd-notes-content, div.dropdown_container ol.dropdown_notes li.notes_preview a p, div.dropdown_container ol.dropdown_inbox li.msg_preview a p {
+  font-size: 0.8125em;
+  color: #aaaaaa; }
+
+/* line 360, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-notes-preview {
+  white-space: normal; }
+
+/* line 369, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-notes-user-content-preview, .dd-notes-user-content-preview, div.dropdown_container ol.dropdown_notes li.notes_preview a p.user_content_preview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/* line 376, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-msg-time-basic, .dd-msg-event-date-stamp, .dd-notes-event-date-stamp, div.dropdown_container ol.dropdown_notes li.notes_preview a em.notes_time_dropdown, div.dropdown_container ol.dropdown_inbox li.msg_preview a em.msg_time_dropdown, div.dropdown_container ol.dropdown_con li.con_preview a em.con_time_dropdown {
+  font-size: 0.6875em;
+  color: #d4cec1; }
+
+/* line 381, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-dropdown-mini-header, .sg-dropdown-mini-footer, .dd-mini-footer, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer, div.dropdown_container ol.dropdown_notes li.notes_mini_footer, div.dropdown_container ol.dropdown_con li.con_mini_footer, .dd-mini-header, div.dropdown_container ol.dropdown_inbox li.msg_mini_header, div.dropdown_container ol.dropdown_notes li.notes_mini_header, div.dropdown_container ol.dropdown_con li.con_mini_header {
+  background: white; }
+
+/* line 384, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-dropdown-mini-header, .sg-dropdown-mini-footer, .dd-mini-footer, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer, div.dropdown_container ol.dropdown_notes li.notes_mini_footer, div.dropdown_container ol.dropdown_con li.con_mini_footer, .dd-mini-header, div.dropdown_container ol.dropdown_inbox li.msg_mini_header, div.dropdown_container ol.dropdown_notes li.notes_mini_header, div.dropdown_container ol.dropdown_con li.con_mini_header {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 4px 2px;
+  -moz-border-radius: 4px / 2px;
+  border-radius: 4px / 2px; }
+
+/* line 389, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-dropdown-mini-footer, .dd-mini-footer, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer, div.dropdown_container ol.dropdown_notes li.notes_mini_footer, div.dropdown_container ol.dropdown_con li.con_mini_footer {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px 4px;
+  -moz-border-radius: 2px / 4px;
+  border-radius: 2px / 4px; }
+
+/* line 406, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-basic-input, .sg-title-basic-input, .fe-title-basic-input, .es-doings-item-forms-input, .reveal_modal_upload_text input[name="t_title"], .sg-body-basic-textarea, .fe-body-basic-textarea, .es-doings-item-forms-textarea, .reveal_modal_upload_text textarea[name="t_body"], .sg-basic-search-input, .fe-search-basic-input, div.mobile_search_home_band input.mobile_header_search, .mobileOn div.mobile_search_home_band input.mobile_header_search, body.tabletOn div.mobile_search_home_band input.mobile_header_search {
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px; }
+
+/* line 427, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-basic-search-input, .fe-search-basic-input, div.mobile_search_home_band input.mobile_header_search, .mobileOn div.mobile_search_home_band input.mobile_header_search, body.tabletOn div.mobile_search_home_band input.mobile_header_search {
+  height: 14px; }
+
+/* line 441, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-basic-button, .sg-basic-invisible-button, .fe-basic-invisible-button, .fe-basic-invisible-square-button, div.mobile_search_home_band button.mobile_home_button, .mobileOn button.nav_tog_button, body.tabletOn button.nav_tog_button, body.tabletOn div.mobile_search_home_band button.mobile_home_button, body.tabletOn button.quick_upload_button2, section.utility_space button.quick_upload_button, section.utility_space div.dropdown_box button, .sg-options-drop-button, .es-cropped-item-option-button, .fe-basic-button {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 446, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-basic-button-hover, .sg-basic-invisible-button-hover, .fe-basic-invisible-button-hover, section.utility_space button.quick_upload_button:hover, .sg-options-drop-button:hover, .es-cropped-item-option-button:hover, .fe-basic-button-hover, .fe-basic-invisible-square-button-hover, div.mobile_search_home_band button.mobile_home_button:hover, body.tabletOn div.mobile_search_home_band button.mobile_home_button:hover, body.tabletOn button.quick_upload_button2:hover, section.utility_space div.dropdown_box button:hover {
+  background: #f9c429; }
+
+/* line 449, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-basic-button-active, .sg-options-drop-button:active, .es-cropped-item-option-button:active, .fe-basic-button-active, body.tabletOn button.quick_upload_button2:active, section.utility_space div.dropdown_box button:active {
+  background: #856404; }
+
+/* line 457, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-basic-invisible-button-hover, .fe-basic-invisible-button-hover, section.utility_space button.quick_upload_button:hover {
+  border: none; }
+
+/* line 471, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-form-positive-basic-button, .fe-form-submit-button, input.submit_button {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 476, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-form-positive-basic-button-hover, .fe-form-submit-button-hover, input.submit_button:hover {
+  background: #cccccc; }
+
+/* line 479, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-form-positive-basic-button-active, .fe-form-submit-button-active, input.submit_button:active {
+  background: #333333; }
+
+/* line 485, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-form-negative-basic-button, .fe-form-cancel-button, button.cancel_button {
+  background: white;
+  border: none; }
+
+/* line 490, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-form-negative-basic-button-hover, .fe-form-cancel-button-hover, button.cancel_button:hover {
+  background: #cccccc; }
+
+/* line 495, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-form-negative-basic-button-active, .fe-form-cancel-button-active {
+  background: #333333; }
+
+/* line 505, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-edit-trigger-button, .es-doings-item-buttons, .fe-edit-trigger-button, nav button.upload_profile_picture_button {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+  /* line 509, ../../../../Riot Framework Backboard /_styleGuide.scss */
+  .sg-edit-trigger-button:hover, .es-doings-item-buttons:hover, .fe-edit-trigger-button:hover, nav button.upload_profile_picture_button:hover {
+    background: #cccccc; }
+  /* line 512, ../../../../Riot Framework Backboard /_styleGuide.scss */
+  .sg-edit-trigger-button:active, .es-doings-item-buttons:active, .fe-edit-trigger-button:active, nav button.upload_profile_picture_button:active {
+    background: gray; }
+
+/* line 539, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-shapes-more-options-icon, .mobileOn button.nav_tog_button div.more_options {
+  border: 1px inset;
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.1);
+  margin: 2px auto 0 auto;
+  width: 20px;
+  height: 4px; }
+
+/* line 556, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-item-container-small, .es-cropped-item-main-container-small {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none; }
+
+/* line 561, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-item-title-small, .es-item-container-info-title, .es-cropped-item-title {
+  text-decoration: none;
+  color: grey; }
+
+/* line 566, ../../../../Riot Framework Backboard /_styleGuide.scss */
+.sg-item-date-small, .es-cropped-item-date {
+  text-decoration: none;
+  color: grey; }
+
+/* line 32, ../../../../Riot Framework Backboard /_skeleton.scss */
+* {
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
+
+/* line 15, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-header-icon-anchor, body.tabletOn button.quick_upload_button2 a.plus_icon, header.band div.header_wrapp ul.header_list > li a.header_icons, section.utility_space button.quick_upload_button a.plus_icon, section.utility_space div.dropdown_box button span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: auto 5.5px 0 5.5px; }
+
+/* line 29, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-img-thumbnail-basic, img.thumbnail_basic {
+  float: left;
+  width: auto;
+  height: 50px;
+  margin: 0px 0px;
+  padding: 0; }
+
+/* line 38, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-img-thumnail-small {
+  height: 33px; }
+
+/* line 60, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-style-container-small, .reveal_modal_upload_images div.item_style_cover, .reveal_modal_upload_video div.item_style_cover, .reveal_modal_upload_audio div.item_style_cover {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 73, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-main-container-small, .reveal_modal_upload_images div.formset_container, .reveal_modal_upload_video div.formset_container, .reveal_modal_upload_audio div.formset_container {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 194.33333px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 4px 0 0;
+  vertical-align: bottom; }
+  @media only screen and (max-width: 480px) {
+    /* line 73, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-item-main-container-small, .reveal_modal_upload_images div.formset_container, .reveal_modal_upload_video div.formset_container, .reveal_modal_upload_audio div.formset_container {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 73, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-item-main-container-small, .reveal_modal_upload_images div.formset_container, .reveal_modal_upload_video div.formset_container, .reveal_modal_upload_audio div.formset_container {
+      width: 300px; } }
+
+/* line 85, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-container-small-image, .reveal_modal_upload_images div.formset_container img, .reveal_modal_upload_video div.formset_container img, .reveal_modal_upload_audio div.formset_container img {
+  display: left;
+  display: inline;
+  width: auto;
+  height: auto;
+  max-width: 185px;
+  max-height: none;
+  margin: 0 5px 0 0; }
+  @media only screen and (max-width: 480px) {
+    /* line 85, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-item-container-small-image, .reveal_modal_upload_images div.formset_container img, .reveal_modal_upload_video div.formset_container img, .reveal_modal_upload_audio div.formset_container img {
+      max-width: 290px; } }
+
+/* line 89, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-container-small-input, .reveal_modal_upload_images div.formset_container input, .reveal_modal_upload_video div.formset_container input, .reveal_modal_upload_audio div.formset_container input {
+  width: 100%;
+  height: auto;
+  margin: 5px auto 0;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* line 97, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-container-small-textarea, .reveal_modal_upload_images div.formset_container textarea, .reveal_modal_upload_video div.formset_container textarea, .reveal_modal_upload_audio div.formset_container textarea {
+  width: 100%;
+  height: 65px;
+  margin: 5px auto 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  resize: none; }
+
+/* line 106, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-container-small-utility-bar, .reveal_modal_upload_images div.formset_container div.item_util_bar, .reveal_modal_upload_video div.formset_container div.item_util_bar, .reveal_modal_upload_audio div.formset_container div.item_util_bar {
+  height: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1); }
+
+/* line 115, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-container-info-container-small {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  padding: 0 5px; }
+
+/* line 123, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-item-container-info-title {
+  display: inline-block; }
+
+/* line 150, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-doings-item-main-container {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 736px;
+  height: 260px;
+  padding-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 480px) {
+    /* line 150, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-main-container {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 150, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-main-container {
+      width: 300px; } }
+  @media only and (min-width: 480px) {
+    /* line 150, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-main-container {
+      margin: 0 10px; } }
+
+/* line 169, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-cropped-item-main-container-small {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 27.66667px;
+  margin-right: 0;
+  width: 186px;
+  height: auto;
+  margin-bottom: 8px;
+  padding: 2px 2px 6px; }
+  @media only screen and (max-width: 480px) {
+    /* line 169, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-cropped-item-main-container-small {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 169, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-cropped-item-main-container-small {
+      width: 300px; } }
+
+/* line 180, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-cropped-item-image-container-small {
+  display: left;
+  display: inline;
+  width: auto;
+  height: auto;
+  max-width: 180px;
+  max-height: 200px;
+  margin: 0 0 0 0;
+  margin-left: 1px; }
+  @media only screen and (max-width: 480px) {
+    /* line 180, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-cropped-item-image-container-small {
+      max-width: 300px; } }
+
+/* line 186, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-cropped-item-image-small {
+  width: 100%;
+  display: inline-block;
+  max-width: 300px;
+  margin-left: 0px; }
+
+/* line 193, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-cropped-item-title-meta-container {
+  width: 178px;
+  height: 0px;
+  margin-top: 6px;
+  margin-left: 1px; }
+
+/* line 200, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-cropped-item-title {
+  font-size: 0.875em;
+  float: left; }
+
+/* line 206, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-cropped-item-date {
+  float: right;
+  margin-top: 5px;
+  font-size: 0.625em; }
+
+/* line 213, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-cropped-item-option-button {
+  display: inline-block;
+  float: right; }
+
+/* line 220, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-doings-item-forms {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 444.33333px; }
+  @media only screen and (max-width: 480px) {
+    /* line 220, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-forms {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 220, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-forms {
+      width: 300px; } }
+
+/* line 226, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-doings-item-forms-input {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 444.33333px; }
+  @media only screen and (max-width: 480px) {
+    /* line 226, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-forms-input {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 226, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-forms-input {
+      width: 300px; } }
+
+/* line 232, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-doings-item-forms-textarea {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 444.33333px;
+  max-height: 170px; }
+  @media only screen and (max-width: 480px) {
+    /* line 232, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-forms-textarea {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 232, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-forms-textarea {
+      width: 300px; } }
+
+/* line 239, ../../../../Riot Framework Backboard /_essentials.scss */
+.es-doings-item-buttons {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 69.33333px;
+  margin-right: 0;
+  height: 30px;
+  margin-left: -5px;
+  margin-bottom: 10px; }
+  @media only screen and (max-width: 480px) {
+    /* line 239, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-buttons {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 239, ../../../../Riot Framework Backboard /_essentials.scss */
+    .es-doings-item-buttons {
+      width: 300px; } }
+
+/* line 13, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-form-globals, .fe-title-basic-input, .es-doings-item-forms-input, .reveal_modal_upload_text input[name="t_title"], .fe-body-basic-textarea, .es-doings-item-forms-textarea, .reveal_modal_upload_text textarea[name="t_body"], .fe-search-basic-input, div.mobile_search_home_band input.mobile_header_search, .mobileOn div.mobile_search_home_band input.mobile_header_search, body.tabletOn div.mobile_search_home_band input.mobile_header_search, .fe-form-cancel-button, button.cancel_button, .fe-form-submit-button, input.submit_button {
+  margin-top: 8px; }
+
+/* line 26, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-title-basic-input, .es-doings-item-forms-input, .reveal_modal_upload_text input[name="t_title"] {
+  padding-left: 5px;
+  margin: 0; }
+
+/* line 36, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-body-basic-textarea, .es-doings-item-forms-textarea, .reveal_modal_upload_text textarea[name="t_body"] {
+  padding-left: 5px;
+  overflow: auto;
+  vertical-align: top;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  resize: vertical; }
+
+/* line 83, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-basic-invisible-button, .fe-basic-invisible-square-button, div.mobile_search_home_band button.mobile_home_button, .mobileOn button.nav_tog_button, body.tabletOn button.nav_tog_button, body.tabletOn div.mobile_search_home_band button.mobile_home_button, body.tabletOn button.quick_upload_button2, section.utility_space button.quick_upload_button, section.utility_space div.dropdown_box button {
+  border: none; }
+
+/* line 92, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-basic-invisible-square-button, div.mobile_search_home_band button.mobile_home_button, .mobileOn button.nav_tog_button, body.tabletOn button.nav_tog_button, body.tabletOn div.mobile_search_home_band button.mobile_home_button {
+  border: none;
+  height: 40px;
+  width: 42px; }
+
+/* line 102, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-button-connection-small, div.dropdown_container ol.dropdown_con li.con_preview a button.deny_connection, div.dropdown_container ol.dropdown_con li.con_preview a button.accept_connection {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 69.33333px; }
+  @media only screen and (max-width: 480px) {
+    /* line 102, ../../../../Riot Framework Backboard /_formElements.scss */
+    .fe-button-connection-small, div.dropdown_container ol.dropdown_con li.con_preview a button.deny_connection, div.dropdown_container ol.dropdown_con li.con_preview a button.accept_connection {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 102, ../../../../Riot Framework Backboard /_formElements.scss */
+    .fe-button-connection-small, div.dropdown_container ol.dropdown_con li.con_preview a button.deny_connection, div.dropdown_container ol.dropdown_con li.con_preview a button.accept_connection {
+      width: 300px; } }
+
+/* line 111, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-form-cancel-button, button.cancel_button {
+  height: 35px; }
+
+/* line 127, ../../../../Riot Framework Backboard /_formElements.scss */
+.fe-form-submit-button, input.submit_button {
+  height: 35px; }
+
+/* line 18, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-basic-container, div.dropdown_container, div.dropdown_container_account {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin: 30px 0px 0px 0;
+  z-index: 99; }
+
+/* line 26, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-basic-box, div.dropdown_container_account ol.dropdown_account {
+  position: absolute;
+  top: -23px;
+  width: 199px;
+  height: 205px;
+  margin: 0;
+  display: none; }
+
+/* line 36, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-basic-list-element, div.dropdown_container_account ol.dropdown_account li {
+  margin: 13px 0;
+  width: 100%; }
+
+/* line 41, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-basic-anchor-element, div.dropdown_container_account ol.dropdown_account li > a {
+  float: left;
+  padding: 10px 25px;
+  width: 100%;
+  text-align: left; }
+
+/* line 58, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-mini-header, div.dropdown_container ol.dropdown_inbox li.msg_mini_header, div.dropdown_container ol.dropdown_notes li.notes_mini_header, div.dropdown_container ol.dropdown_con li.con_mini_header {
+  position: absolute;
+  margin: -27px 0 0 -1px;
+  width: 350px;
+  height: 28px; }
+
+/* line 65, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-mini-header-section-description, div.dropdown_container ol.dropdown_inbox li.msg_mini_header em, div.dropdown_container ol.dropdown_notes li.notes_mini_header em, div.dropdown_container ol.dropdown_con li.con_mini_header em {
+  float: left;
+  margin: 5px 10px; }
+
+/* line 70, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-mini-header-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_header a.inbox_section_link, div.dropdown_container ol.dropdown_notes li.notes_mini_header a.notes_section_link, div.dropdown_container ol.dropdown_con li.con_mini_header a.con_section_link {
+  float: right;
+  width: auto;
+  height: 0px;
+  margin: 5px 10px;
+  padding: 0; }
+
+/* line 85, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-mini-footer, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer, div.dropdown_container ol.dropdown_notes li.notes_mini_footer, div.dropdown_container ol.dropdown_con li.con_mini_footer {
+  position: absolute;
+  margin: 296px 0 0 -1px;
+  padding-top: 5px;
+  width: 350px;
+  height: 30px; }
+
+/* line 93, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-mini-footer-section-link, div.dropdown_container ol.dropdown_inbox li.msg_mini_footer a.msg_section_link_bottom, div.dropdown_container ol.dropdown_notes li.notes_mini_footer a.notes_section_link_bottom, div.dropdown_container ol.dropdown_con li.con_mini_footer a.con_section_link_bottom {
+  float: center;
+  margin: 0 0 0 135px;
+  font-size: 1em; }
+
+/* line 111, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-msg-notes-basic-box, div.dropdown_container ol.dropdown_inbox, div.dropdown_container ol.dropdown_notes, div.dropdown_container ol.dropdown_con {
+  top: 40px;
+  width: 350px;
+  height: 300px;
+  top: 55px;
+  display: none; }
+
+/* line 123, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-hori-box-container, div.dropdown_container ol.dropdown_notes li.notes_preview, div.dropdown_container ol.dropdown_con li.con_preview {
+  float: left;
+  width: 100%;
+  margin: 3px 0 0 0; }
+
+/* line 136, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-hori-msg-content-box-link, div.dropdown_container ol.dropdown_inbox li.msg_preview a, div.dropdown_container ol.dropdown_con li.con_preview a {
+  float: left;
+  width: 100%;
+  height: 60px;
+  padding: 3px 13px; }
+
+/* line 147, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-msger-name, div.dropdown_container ol.dropdown_inbox li.msg_preview a h6, div.dropdown_container ol.dropdown_con li.con_preview a h6 {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 194.33333px;
+  padding-left: 6px; }
+  @media only screen and (max-width: 480px) {
+    /* line 147, ../../../../Riot Framework Backboard /_dropdowns.scss */
+    .dd-msger-name, div.dropdown_container ol.dropdown_inbox li.msg_preview a h6, div.dropdown_container ol.dropdown_con li.con_preview a h6 {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 147, ../../../../Riot Framework Backboard /_dropdowns.scss */
+    .dd-msger-name, div.dropdown_container ol.dropdown_inbox li.msg_preview a h6, div.dropdown_container ol.dropdown_con li.con_preview a h6 {
+      width: 300px; } }
+
+/* line 153, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-msg-content-preview, .dd-notes-user-content, .dd-notes-content, div.dropdown_container ol.dropdown_notes li.notes_preview a p, div.dropdown_container ol.dropdown_inbox li.msg_preview a p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  width: 78%;
+  padding: 7px 0 0 11px; }
+
+/* line 168, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-msg-event-date-stamp, .dd-notes-event-date-stamp, div.dropdown_container ol.dropdown_notes li.notes_preview a em.notes_time_dropdown, div.dropdown_container ol.dropdown_inbox li.msg_preview a em.msg_time_dropdown, div.dropdown_container ol.dropdown_con li.con_preview a em.con_time_dropdown {
+  float: left;
+  height: 10px;
+  padding: 0;
+  margin: 0 0 0 11px;
+  line-height: 2; }
+
+/* line 184, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-hori-notes-content-box-link, div.dropdown_container ol.dropdown_notes li.notes_preview a {
+  float: left;
+  width: 100%;
+  height: 75px;
+  padding: 3px 13px; }
+
+/* line 195, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-notes-content, div.dropdown_container ol.dropdown_notes li.notes_preview a p {
+  padding: 0 0 0 11px;
+  white-space: normal; }
+
+/* line 205, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-notes-user-content-preview, div.dropdown_container ol.dropdown_notes li.notes_preview a p.user_content_preview {
+  padding-top: 5px; }
+
+/* line 210, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-notes-event-date-stamp, div.dropdown_container ol.dropdown_notes li.notes_preview a em.notes_time_dropdown {
+  line-height: 1.7;
+  margin: 0 0 0 62px;
+  clear: both; }
+
+/* line 223, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-nav-list-container, nav ul.backb_navigation_list ul.dropdownList {
+  display: none;
+  margin-top: 0px; }
+
+/* line 228, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-nav-list-element, nav ul.backb_navigation_list ul.dropdownList li {
+  padding-left: 30px; }
+
+/* line 231, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-nav-list-element-hover {
+  background-color: white; }
+
+/* line 272, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-reveal-modal, .reveal_modal_upload_text, .reveal_modal_upload_images, .reveal_modal_upload_video, .reveal_modal_upload_audio {
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  background: white;
+  position: absolute;
+  z-index: 101;
+  padding: 30px 40px 34px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  width: 540px;
+  margin-left: -270px; }
+  @media only screen and (max-width: 480px) {
+    /* line 272, ../../../../Riot Framework Backboard /_dropdowns.scss */
+    .dd-reveal-modal, .reveal_modal_upload_text, .reveal_modal_upload_images, .reveal_modal_upload_video, .reveal_modal_upload_audio {
+      width: 320px;
+      margin-left: 0;
+      left: -10px;
+      padding: 10px; } }
+
+/* line 302, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-reveal-modal-small {
+  width: 373.33333px;
+  margin-left: -186.66667px; }
+  @media only screen and (max-width: 480px) {
+    /* line 302, ../../../../Riot Framework Backboard /_dropdowns.scss */
+    .dd-reveal-modal-small {
+      width: 320px;
+      margin-left: 0;
+      left: -10px;
+      padding: 10px; } }
+
+/* line 314, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-reveal-modal-medium {
+  width: 540px;
+  margin-left: -270px; }
+  @media only screen and (max-width: 480px) {
+    /* line 314, ../../../../Riot Framework Backboard /_dropdowns.scss */
+    .dd-reveal-modal-medium {
+      width: 320px;
+      margin-left: 0;
+      left: -10px;
+      padding: 10px; } }
+
+/* line 326, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.dd-reveal-modal-large, .reveal_modal_upload_images, .reveal_modal_upload_video, .reveal_modal_upload_audio {
+  width: 940px;
+  margin-left: -470px; }
+  @media only screen and (min-width: 480px) and (max-width: 850px) {
+    /* line 326, ../../../../Riot Framework Backboard /_dropdowns.scss */
+    .dd-reveal-modal-large, .reveal_modal_upload_images, .reveal_modal_upload_video, .reveal_modal_upload_audio {
+      width: 540px;
+      margin-left: -270px; } }
+  @media only screen and (max-width: 480px) {
+    /* line 326, ../../../../Riot Framework Backboard /_dropdowns.scss */
+    .dd-reveal-modal-large, .reveal_modal_upload_images, .reveal_modal_upload_video, .reveal_modal_upload_audio {
+      width: 320px;
+      margin-left: 0;
+      left: -10px;
+      padding: 10px; } }
+
+/* line 344, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.close-reveal-modal {
+  font-size: 22px;
+  line-height: .5;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+  font-weight: bold;
+  cursor: pointer; }
+
+/* line 361, ../../../../Riot Framework Backboard /_dropdowns.scss */
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0; }
+
+/* line 17, ../../../../Riot Framework Backboard /_hacks.scss */
+.hk-upload-input-wrapper, section.utility_space div.dropdown_box button.upload_media_button {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; }
+
+/* line 24, ../../../../Riot Framework Backboard /_hacks.scss */
+.hk-upload-input {
+  cursor: pointer;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*This makes the button huge so that it can be clicked on*/
+  font-size: 50px;
+  /*Opacity settings for all browsers*/
+  opacity: 0;
+  -moz-opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+
+/* line 50, ../../../../Riot Framework Backboard /_hacks.scss */
+.hk-image-crop-container, .es-cropped-item-image-container-small {
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+/* line 11, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+div.mobile_search_home_band {
+  display: none;
+  height: 34px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 50; }
+  /* line 21, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  div.mobile_search_home_band input.mobile_header_search {
+    float: left;
+    display: inline;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 194.33333px;
+    margin-right: 0;
+    margin-top: 2px; }
+    @media only screen and (max-width: 480px) {
+      /* line 21, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+      div.mobile_search_home_band input.mobile_header_search {
+        margin-left: 0;
+        margin-right: 0; } }
+    @media only screen and (max-width: 480px) {
+      /* line 21, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+      div.mobile_search_home_band input.mobile_header_search {
+        width: 300px; } }
+  /* line 30, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  div.mobile_search_home_band button.mobile_home_button {
+    position: absolute;
+    left: 0%;
+    top: -4px; }
+
+/* line 60, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+.mobileOn ul.header_list {
+  height: 40px !important; }
+  /* line 66, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  .mobileOn ul.header_list > li {
+    float: left !important;
+    width: 29px !important;
+    margin-left: 26px !important;
+    padding: 0 !important; }
+    /* line 73, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+    .mobileOn ul.header_list > li.header_logo {
+      float: left !important;
+      margin: 3px 25px 0 -30px !important; }
+/* line 84, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+.mobileOn button.nav_tog_button {
+  border-color: transparent rgba(0, 0, 0, 0.1) transparent transparent;
+  display: none;
+  position: absolute;
+  left: -16%;
+  top: 0;
+  padding: 2px 15px 0 10px; }
+/* line 102, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+.mobileOn div.mobile_search_home_band {
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 42px;
+  min-width: 400px;
+  zoom: 1;
+  margin-bottom: 14px;
+  position: relative; }
+  /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+  .mobileOn div.mobile_search_home_band:after {
+    clear: both; }
+  /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+  .mobileOn div.mobile_search_home_band:before, .mobileOn div.mobile_search_home_band:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  /* line 112, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  .mobileOn div.mobile_search_home_band input.mobile_header_search {
+    display: inline-block;
+    float: left;
+    margin: 6px auto 0 13%;
+    width: 290px; }
+/* line 123, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+.mobileOn a.header_icons_home {
+  width: 100%;
+  height: 100%;
+  z-index: 60; }
+  /* line 129, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  .mobileOn a.header_icons_home:before {
+    line-height: 2em; }
+  /* line 132, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  .mobileOn a.header_icons_home:hover {
+    background: inherit; }
+  /* line 137, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  .mobileOn a.header_icons_home button.quick_upload_button2 {
+    display: none; }
+
+/* line 161, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn .header_band {
+  width: 100% !important; }
+/* line 165, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn .header_wrapp {
+  width: 100% !important; }
+/* line 170, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn section.utility_space {
+  width: 100% !important; }
+/* line 175, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn div.page_wrapp {
+  width: 100% !important; }
+/* line 185, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn ul.header_list {
+  height: 40px !important; }
+  /* line 189, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  body.tabletOn ul.header_list > li {
+    float: left !important;
+    width: 29px !important;
+    margin-left: 30px !important;
+    padding: 0 !important; }
+    /* line 196, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+    body.tabletOn ul.header_list > li.header_logo {
+      float: left !important;
+      margin: 3px 25px 0 -30px !important; }
+/* line 204, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn button.nav_tog_button {
+  display: none;
+  position: absolute;
+  top: 43px;
+  left: 0%;
+  z-index: 99; }
+  /* line 213, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  body.tabletOn button.nav_tog_button div.more_options {
+    border: 1px inset;
+    border-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+    margin: 2px auto 0 auto;
+    width: 20px;
+    height: 4px; }
+/* line 227, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn div.mobile_search_home_band {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 42px;
+  min-width: 868px;
+  zoom: 1;
+  margin-bottom: 14px;
+  position: relative; }
+  /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+  body.tabletOn div.mobile_search_home_band:after {
+    clear: both; }
+  /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+  body.tabletOn div.mobile_search_home_band:before, body.tabletOn div.mobile_search_home_band:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  /* line 237, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  body.tabletOn div.mobile_search_home_band input.mobile_header_search {
+    float: left;
+    display: inline;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 194.33333px;
+    margin-left: 791.66667px;
+    margin-top: 6px; }
+    @media only screen and (max-width: 480px) {
+      /* line 237, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+      body.tabletOn div.mobile_search_home_band input.mobile_header_search {
+        margin-left: 0;
+        margin-right: 0; } }
+    @media only screen and (max-width: 480px) {
+      /* line 237, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+      body.tabletOn div.mobile_search_home_band input.mobile_header_search {
+        width: 300px; } }
+    @media only screen and (min-width: 480px) and (max-width: 850px) {
+      /* line 237, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+      body.tabletOn div.mobile_search_home_band input.mobile_header_search {
+        margin-left: 608px; } }
+  /* line 247, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  body.tabletOn div.mobile_search_home_band button.mobile_home_button {
+    position: absolute;
+    left: 8%;
+    top: 0px; }
+  /* line 258, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  body.tabletOn div.mobile_search_home_band a.header_icons_home {
+    width: 100%;
+    height: 100%;
+    z-index: 60; }
+    /* line 264, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+    body.tabletOn div.mobile_search_home_band a.header_icons_home:hover {
+      background: inherit; }
+/* line 271, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+body.tabletOn button.quick_upload_button2 {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 69.33333px;
+  margin: 0 0 0 0;
+  height: 37px; }
+  @media only screen and (max-width: 480px) {
+    /* line 271, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+    body.tabletOn button.quick_upload_button2 {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 271, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+    body.tabletOn button.quick_upload_button2 {
+      width: 300px; } }
+  /* line 285, ../../../../Riot Framework Backboard /conditional_StyleSheets/_mobile_&_tablet_backb_global.scss */
+  body.tabletOn button.quick_upload_button2 a.plus_icon {
+    color: #d5d2cc;
+    float: center;
+    padding-top: 10px; }
+
+/* line 6, ../sass/backb_global.scss */
+html {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 12, ../sass/backb_global.scss */
+body {
+  width: 100%; }
+
+/* line 21, ../sass/backb_global.scss */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+@font-face {
+  font-family: 'rioticons';
+  src: url("../fonts/rioticons.eot");
+  src: url("../fonts/rioticons.eot?#iefix") format("embedded-opentype"), url("../fonts/rioticons.svg#icomoon") format("svg"), url("../fonts/rioticons.woff") format("woff"), url("../fonts/rioticons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 36, ../sass/backb_global.scss */
+.screen_reader_text, section.utility_space div.dropdown_box button.upload_media_button label, .reveal_modal_upload_text label, .reveal_modal_upload_images div.formset_container label, .reveal_modal_upload_video div.formset_container label, .reveal_modal_upload_audio div.formset_container label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  /* line 50, ../sass/backb_global.scss */
+  .screen_reader_text.focusable:active, section.utility_space div.dropdown_box button.upload_media_button label.focusable:active, .reveal_modal_upload_text label.focusable:active, .reveal_modal_upload_images div.formset_container label.focusable:active, .reveal_modal_upload_video div.formset_container label.focusable:active, .reveal_modal_upload_audio div.formset_container label.focusable:active, .screen_reader_text.focusable:focus, section.utility_space div.dropdown_box button.upload_media_button label.focusable:focus, .reveal_modal_upload_text label.focusable:focus, .reveal_modal_upload_images div.formset_container label.focusable:focus, .reveal_modal_upload_video div.formset_container label.focusable:focus, .reveal_modal_upload_audio div.formset_container label.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+/* line 72, ../sass/backb_global.scss */
+button.nav_tog_button {
+  display: none; }
+
+/* line 88, ../sass/backb_global.scss */
+div.dropdown_container {
+  margin-left: -120px; }
+  /* line 219, ../sass/backb_global.scss */
+  div.dropdown_container ol.dropdown_con {
+    left: 5%; }
+
+/* line 307, ../sass/backb_global.scss */
+header.band {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-width: 1100px; }
+  @media only screen and (max-width: 480px) {
+    /* line 307, ../sass/backb_global.scss */
+    header.band {
+      min-width: 400px; } }
+  /* line 319, ../sass/backb_global.scss */
+  header.band:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  /* line 326, ../sass/backb_global.scss */
+  header.band div.header_wrapp {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    width: 1000px; }
+    /* line 50, ../../../../Riot Framework Backboard /_skeleton.scss */
+    header.band div.header_wrapp:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    @media only screen and (min-width: 480px) and (max-width: 1100px) {
+      /* line 326, ../sass/backb_global.scss */
+      header.band div.header_wrapp {
+        margin: 0 20px; } }
+    @media only screen and (max-width: 480px) {
+      /* line 326, ../sass/backb_global.scss */
+      header.band div.header_wrapp {
+        width: 300px; } }
+    /* line 329, ../sass/backb_global.scss */
+    header.band div.header_wrapp ul.header_list {
+      float: left;
+      display: inline;
+      margin-left: 7px;
+      margin-right: 7px;
+      width: 486px;
+      margin-left: 0;
+      margin-right: 0;
+      zoom: 1;
+      height: 35px;
+      padding: 5px 0 0 0; }
+      @media only screen and (max-width: 480px) {
+        /* line 329, ../sass/backb_global.scss */
+        header.band div.header_wrapp ul.header_list {
+          margin-left: 0;
+          margin-right: 0; } }
+      @media only screen and (max-width: 480px) {
+        /* line 329, ../sass/backb_global.scss */
+        header.band div.header_wrapp ul.header_list {
+          width: 300px; } }
+      /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+      header.band div.header_wrapp ul.header_list:after {
+        clear: both; }
+      /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+      header.band div.header_wrapp ul.header_list:before, header.band div.header_wrapp ul.header_list:after {
+        content: '\0020';
+        display: block;
+        overflow: hidden;
+        visibility: hidden;
+        width: 0;
+        height: 0; }
+      /* line 336, ../sass/backb_global.scss */
+      header.band div.header_wrapp ul.header_list > li {
+        float: left;
+        display: inline;
+        margin-left: 7px;
+        margin-right: 7px;
+        width: 27.66667px;
+        margin-left: 0;
+        margin-right: 0;
+        height: 100%; }
+        @media only screen and (max-width: 480px) {
+          /* line 336, ../sass/backb_global.scss */
+          header.band div.header_wrapp ul.header_list > li {
+            margin-left: 0;
+            margin-right: 0; } }
+        @media only screen and (max-width: 480px) {
+          /* line 336, ../sass/backb_global.scss */
+          header.band div.header_wrapp ul.header_list > li {
+            width: 300px; } }
+        /* line 342, ../sass/backb_global.scss */
+        header.band div.header_wrapp ul.header_list > li.header_logo {
+          float: left;
+          display: inline;
+          margin-left: 7px;
+          margin-right: 7px;
+          width: 69.33333px;
+          margin-left: -5.3%;
+          margin-right: 4%; }
+          @media only screen and (max-width: 480px) {
+            /* line 342, ../sass/backb_global.scss */
+            header.band div.header_wrapp ul.header_list > li.header_logo {
+              margin-left: 0;
+              margin-right: 0; } }
+          @media only screen and (max-width: 480px) {
+            /* line 342, ../sass/backb_global.scss */
+            header.band div.header_wrapp ul.header_list > li.header_logo {
+              width: 300px; } }
+        /* line 350, ../sass/backb_global.scss */
+        header.band div.header_wrapp ul.header_list > li a.header_icons {
+          padding-left: 6px; }
+          /* line 358, ../sass/backb_global.scss */
+          header.band div.header_wrapp ul.header_list > li a.header_icons:before {
+            line-height: 1.5; }
+          /* line 363, ../sass/backb_global.scss */
+          header.band div.header_wrapp ul.header_list > li a.header_icons[title="notes"]:before {
+            line-height: 1.5; }
+          /* line 367, ../sass/backb_global.scss */
+          header.band div.header_wrapp ul.header_list > li a.header_icons[title="connections"]:before {
+            line-height: 1.5; }
+        /* line 373, ../sass/backb_global.scss */
+        header.band div.header_wrapp ul.header_list > li.header_search_icon {
+          float: left;
+          display: inline;
+          margin-left: 7px;
+          margin-right: 7px;
+          width: 27.66667px;
+          margin-left: 208.33333px;
+          margin-right: 0; }
+          @media only screen and (max-width: 480px) {
+            /* line 373, ../sass/backb_global.scss */
+            header.band div.header_wrapp ul.header_list > li.header_search_icon {
+              margin-left: 0;
+              margin-right: 0; } }
+          @media only screen and (max-width: 480px) {
+            /* line 373, ../sass/backb_global.scss */
+            header.band div.header_wrapp ul.header_list > li.header_search_icon {
+              width: 300px; } }
+          @media only screen and (min-width: 480px) and (max-width: 850px) {
+            /* line 373, ../sass/backb_global.scss */
+            header.band div.header_wrapp ul.header_list > li.header_search_icon {
+              margin-left: 160px; } }
+          /* line 383, ../sass/backb_global.scss */
+          header.band div.header_wrapp ul.header_list > li.header_search_icon a:before {
+            line-height: 1.7;
+            padding-left: 6px; }
+        /* line 389, ../sass/backb_global.scss */
+        header.band div.header_wrapp ul.header_list > li.header_user_account_options {
+          float: left;
+          display: inline;
+          margin-left: 7px;
+          margin-right: 7px;
+          width: 236px;
+          margin-left: 0;
+          margin-right: 0;
+          float: right; }
+          @media only screen and (max-width: 480px) {
+            /* line 389, ../sass/backb_global.scss */
+            header.band div.header_wrapp ul.header_list > li.header_user_account_options {
+              margin-left: 0;
+              margin-right: 0; } }
+          @media only screen and (max-width: 480px) {
+            /* line 389, ../sass/backb_global.scss */
+            header.band div.header_wrapp ul.header_list > li.header_user_account_options {
+              width: 300px; } }
+          /* line 393, ../sass/backb_global.scss */
+          header.band div.header_wrapp ul.header_list > li.header_user_account_options > a {
+            display: block;
+            padding-top: 5px;
+            text-align: center;
+            width: 100%;
+            height: 100%; }
+
+/* line 415, ../sass/backb_global.scss */
+div.page_wrapp {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 1000px;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%;
+  font-style: normal;
+  font-weight: normal; }
+  /* line 50, ../../../../Riot Framework Backboard /_skeleton.scss */
+  div.page_wrapp:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  @media only screen and (min-width: 480px) and (max-width: 1100px) {
+    /* line 415, ../sass/backb_global.scss */
+    div.page_wrapp {
+      margin: 0 20px; } }
+  @media only screen and (max-width: 480px) {
+    /* line 415, ../sass/backb_global.scss */
+    div.page_wrapp {
+      width: 300px; } }
+
+/* line 425, ../sass/backb_global.scss */
+section.utility_space {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 986px;
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+  margin: 7px 0;
+  zoom: 1;
+  margin-bottom: 14px; }
+  @media only screen and (max-width: 480px) {
+    /* line 425, ../sass/backb_global.scss */
+    section.utility_space {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 425, ../sass/backb_global.scss */
+    section.utility_space {
+      width: 300px; } }
+  /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+  section.utility_space:after {
+    clear: both; }
+  /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+  section.utility_space:before, section.utility_space:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  /* line 433, ../sass/backb_global.scss */
+  section.utility_space button.quick_upload_button {
+    float: left;
+    display: inline;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 69.33333px;
+    float: right;
+    margin-right: 5%;
+    height: 42px; }
+    @media only screen and (max-width: 480px) {
+      /* line 433, ../sass/backb_global.scss */
+      section.utility_space button.quick_upload_button {
+        margin-left: 0;
+        margin-right: 0; } }
+    @media only screen and (max-width: 480px) {
+      /* line 433, ../sass/backb_global.scss */
+      section.utility_space button.quick_upload_button {
+        width: 300px; } }
+    /* line 447, ../sass/backb_global.scss */
+    section.utility_space button.quick_upload_button a.plus_icon {
+      color: #d5d2cc;
+      float: center;
+      padding-top: 10px; }
+  /* line 457, ../sass/backb_global.scss */
+  section.utility_space div.dropdown_box {
+    position: relative;
+    display: none;
+    float: right;
+    padding: 0px;
+    margin: 0px;
+    zoom: 1;
+    margin-bottom: 14px; }
+    /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+    section.utility_space div.dropdown_box:after {
+      clear: both; }
+    /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+    section.utility_space div.dropdown_box:before, section.utility_space div.dropdown_box:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    /* line 467, ../sass/backb_global.scss */
+    section.utility_space div.dropdown_box button {
+      float: left;
+      display: inline;
+      margin-left: 7px;
+      margin-right: 7px;
+      width: 69.33333px;
+      margin-left: 0;
+      margin-right: 0;
+      float: right;
+      height: 42px; }
+      @media only screen and (max-width: 480px) {
+        /* line 467, ../sass/backb_global.scss */
+        section.utility_space div.dropdown_box button {
+          margin-left: 0;
+          margin-right: 0; } }
+      @media only screen and (max-width: 480px) {
+        /* line 467, ../sass/backb_global.scss */
+        section.utility_space div.dropdown_box button {
+          width: 300px; } }
+      /* line 498, ../sass/backb_global.scss */
+      section.utility_space div.dropdown_box button span {
+        padding-top: 10px; }
+
+/* line 511, ../sass/backb_global.scss */
+nav {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 194.33333px;
+  margin-left: 0; }
+  @media only screen and (max-width: 480px) {
+    /* line 511, ../sass/backb_global.scss */
+    nav {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 511, ../sass/backb_global.scss */
+    nav {
+      width: 300px; } }
+  /* line 516, ../sass/backb_global.scss */
+  nav img {
+    width: inherit;
+    height: auto;
+    border: 0.5px solid rgba(51, 51, 51, 0.1);
+    margin: 0 0 6px 0; }
+  /* line 524, ../sass/backb_global.scss */
+  nav button.upload_profile_picture_button {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 8px; }
+  /* line 541, ../sass/backb_global.scss */
+  nav ul.backb_navigation_list {
+    margin-top: 10px; }
+    /* line 545, ../sass/backb_global.scss */
+    nav ul.backb_navigation_list h5 {
+      margin: 10px 0 10px 0; }
+    /* line 550, ../sass/backb_global.scss */
+    nav ul.backb_navigation_list li {
+      height: 23px;
+      padding: 3px 0; }
+      /* line 557, ../sass/backb_global.scss */
+      nav ul.backb_navigation_list li span {
+        margin-left: 2px; }
+        /* line 560, ../sass/backb_global.scss */
+        nav ul.backb_navigation_list li span:hover, nav ul.backb_navigation_list li span:active {
+          color: inherit; }
+      /* line 568, ../sass/backb_global.scss */
+      nav ul.backb_navigation_list li a:hover {
+        color: inherit; }
+
+/* line 597, ../sass/backb_global.scss */
+aside {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 777.66667px;
+  margin-left: 0;
+  margin-right: 0;
+  zoom: 1;
+  height: auto; }
+  @media only screen and (max-width: 480px) {
+    /* line 597, ../sass/backb_global.scss */
+    aside {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 597, ../sass/backb_global.scss */
+    aside {
+      width: 300px; } }
+  /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+  aside:after {
+    clear: both; }
+  /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+  aside:before, aside:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+
+/* line 610, ../sass/backb_global.scss */
+button.cancel_button {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 69.33333px;
+  float: right;
+  bottom: 0px; }
+  @media only screen and (max-width: 480px) {
+    /* line 610, ../sass/backb_global.scss */
+    button.cancel_button {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 610, ../sass/backb_global.scss */
+    button.cancel_button {
+      width: 300px; } }
+
+/* line 626, ../sass/backb_global.scss */
+input.submit_button {
+  float: left;
+  display: inline;
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 69.33333px;
+  float: right;
+  margin-right: 0; }
+  @media only screen and (max-width: 480px) {
+    /* line 626, ../sass/backb_global.scss */
+    input.submit_button {
+      margin-left: 0;
+      margin-right: 0; } }
+  @media only screen and (max-width: 480px) {
+    /* line 626, ../sass/backb_global.scss */
+    input.submit_button {
+      width: 300px; } }
+
+/* line 647, ../sass/backb_global.scss */
+.reveal_modal_upload_text {
+  zoom: 1;
+  margin-bottom: 14px; }
+  /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+  .reveal_modal_upload_text:after {
+    clear: both; }
+  /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+  .reveal_modal_upload_text:before, .reveal_modal_upload_text:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }
+  /* line 651, ../sass/backb_global.scss */
+  .reveal_modal_upload_text [data-icon]:before {
+    float: left;
+    display: inline;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 69.33333px;
+    font-size: 3em;
+    height: 50px; }
+    @media only screen and (max-width: 480px) {
+      /* line 651, ../sass/backb_global.scss */
+      .reveal_modal_upload_text [data-icon]:before {
+        margin-left: 0;
+        margin-right: 0; } }
+    @media only screen and (max-width: 480px) {
+      /* line 651, ../sass/backb_global.scss */
+      .reveal_modal_upload_text [data-icon]:before {
+        width: 300px; } }
+  /* line 661, ../sass/backb_global.scss */
+  .reveal_modal_upload_text input[name="t_title"] {
+    float: left;
+    display: inline;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 444.33333px;
+    margin-top: 8px; }
+    @media only screen and (max-width: 480px) {
+      /* line 661, ../sass/backb_global.scss */
+      .reveal_modal_upload_text input[name="t_title"] {
+        margin-left: 0;
+        margin-right: 0; } }
+    @media only screen and (max-width: 480px) {
+      /* line 661, ../sass/backb_global.scss */
+      .reveal_modal_upload_text input[name="t_title"] {
+        width: 300px; } }
+  /* line 668, ../sass/backb_global.scss */
+  .reveal_modal_upload_text textarea[name="t_body"] {
+    float: left;
+    display: inline;
+    margin-left: 7px;
+    margin-right: 7px;
+    width: 444.33333px;
+    margin-top: 8px;
+    height: 250px; }
+    @media only screen and (max-width: 480px) {
+      /* line 668, ../sass/backb_global.scss */
+      .reveal_modal_upload_text textarea[name="t_body"] {
+        margin-left: 0;
+        margin-right: 0; } }
+    @media only screen and (max-width: 480px) {
+      /* line 668, ../sass/backb_global.scss */
+      .reveal_modal_upload_text textarea[name="t_body"] {
+        width: 300px; } }
+
+/* line 682, ../sass/backb_global.scss */
+.reveal_modal_upload_images, .reveal_modal_upload_video, .reveal_modal_upload_audio {
+  zoom: 1;
+  margin-bottom: 14px; }
+  /* line 152, ../../../../Riot Framework Backboard /_skeleton.scss */
+  .reveal_modal_upload_images:after, .reveal_modal_upload_video:after, .reveal_modal_upload_audio:after {
+    clear: both; }
+  /* line 153, ../../../../Riot Framework Backboard /_skeleton.scss */
+  .reveal_modal_upload_images:before, .reveal_modal_upload_images:after, .reveal_modal_upload_video:before, .reveal_modal_upload_video:after, .reveal_modal_upload_audio:before, .reveal_modal_upload_audio:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0; }

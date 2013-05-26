@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Add Info To Image</title>   
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        {% for image in images %}
+        <p>
+            <img src=../../media/{{image}}/>
+        </p>
+        {% endfor %}
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table>
+                {{ formset }}
+            </table>
+            <p><input type="submit" value="Upload" /></p>
+        </form>
+    </body>
+</html> 

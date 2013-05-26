@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Make a Connection</title>   
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                <p>{{ field.errors }}</p>
+                <p>{{ field.label_tag }}: {{ field }}</p>
+            {% endfor %}
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        <p>_________________________</p>
+        <p>All existing connections of logged-in user:</p>
+        {% for item in connections_i %}
+            <p>_________________________</p>
+            <p>{{ item.recipient }}</p>
+            <p>interest: {{ item.initiator_interest }}</p>
+            <tr>
+                <td><a href="{% url edit_connection item_id=item.pk %}">Edit</a></td>
+                <td><a href="{% url delete_connection item_id=item.pk %}">Delete</a></td>
+            </tr>
+        {% endfor %} 
+        {% for item in connections_they %}
+            <p>_________________________</p>
+            <p>{{ item.initiator }}</p>
+            <p>interest: {{ item.recipient_interest }}</p>
+            <tr>
+                <td><a href="{% url edit_connection item_id=item.pk %}">Edit</a></td>
+                <td><a href="{% url delete_connection item_id=item.pk %}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </body>
+</html> 

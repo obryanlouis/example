@@ -1,0 +1,52 @@
+<html>
+	{% block head %}
+	<head>
+		<html lang="en">
+		<meta charset = "UTF-8"/>
+		<meta name="viewport" content="width=320, initial-scale=.7">
+		<link href="{{ STATIC_URL }}/css/pagestyle.css" type="text/css" rel="stylesheet"/>
+		<link href="{{ STATIC_URL }}/css/plugins.css" type="text/css" rel="stylesheet"/>
+		<link rel="icon" href="{{ STATIC_URL }}/sprites/riotryfav.png" type="image/png">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		if (typeof jQuery == 'undefined') {
+    	document.write(unescape("%3Cscript src='{{ STATIC_URL }}/js/jquery-1.8.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+		}</script>
+		<script src="{{ STATIC_URL }}/js/plugins.js"></script>
+		<script src="{{ STATIC_URL }}/js/regScript.js"></script>
+		<title>{% block title %}{% endblock %}</title>
+	</head>
+	{% endblock %}
+
+
+
+	<body>
+		{# RIOTRY LOGO #}
+		<div id="wrapper">
+			{% block riotry_logo %}
+				<h1 id="riotryLogo">riotry</h1>
+				<hr id="separationLine"></hr>
+        	{% endblock %}
+
+        	{% block form_area %}{% endblock %}
+        	{% block company_info %} 
+        		<section id="companyDetails">
+					<a href="index.html">About</a>
+					<a href="index.html">Help</a> 
+					<a href="index.html">Blog</a>
+					<a href="index.html">Status</a>
+					<a href="index.html">Jobs</a>
+					<a href="index.html">Terms</a>
+					<a href="index.html">Privacy</a>
+					<a href="index.html">Advertisers</a>
+					<a href="index.html">Businesses</a>  
+					<a href="index.html">Media</a>
+					<a href="index.html">Resources</a>
+					<a href="index.html">Directory</a>
+					<a><span>&#169; 2012 riotry</span></a>
+				</section>
+	{% endblock %}
+		</div> {# End wrapper #}
+	</body>
+	</html>
+        

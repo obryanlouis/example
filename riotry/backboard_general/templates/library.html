@@ -1,0 +1,202 @@
+{% extends "backb_base.html" %}
+
+{% block head_feature_request %}{# ===================== HEAD FEATURE BLOCK =============================== #}
+
+	<link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/library.css">
+
+
+{% endblock %}{# ============================================= HF END ===================================== #}
+
+
+{% block nav %}{# ========================================= NAV END =================================== #}
+			 {# @NAV NETWORK @BAR   #}
+			<nav data-type="navCollapseControl">
+
+
+			<div data-trigger-hover-toggle="id_change_profile_button">
+				{# @PROFILE PIC #}
+		      <img src="../media/{{ profile_pic_square_200 }}" alt="{# Content #}">
+	      		{# BUTTON TRIGGER UPLOAD @PROFILE PIC #}
+		          <button class="upload_profile_picture_button" data-trigger-browse-id="id_profile_pic" id="id_change_profile_button">change</button>
+		    </div>
+		          <a href="#" class="users_name">
+		            {{ full_name }}
+		          </a>
+
+		          <ul class="backb_navigation_list">
+		            <h5>network</h5>
+		                <li>
+		                  <span title="feeds" aria-hidden="true" data-icon="&#x23;"></span>
+		                  <a href="#">feeds</a>
+		                </li>
+		                <li>
+		                  <span title="inbox" aria-hidden="true" data-icon="&#x36;"></span>
+		                  <a href="#">inbox</a>
+		                </li>
+		                <li>
+		                  <span title="notes" aria-hidden="true" data-icon="&#x26;"></span>
+		                  <a href="#">notes</a>
+		                </li>
+		                <li>
+		                  <span title="settings" aria-hidden="true" data-icon="&#x30;"></span>
+		                  <a href="#">settings</a>
+		                </li>
+		                <li>
+		                  <span title="scores" aria-hidden="true" data-icon="&#x2c;"></span>
+		                  <a href="#">scores</a>
+		                </li>
+
+		            <h5>profile</h5>
+		                <li>
+		                  <span title="me" aria-hidden="true" data-icon="&#x32;"></span>
+		                  <a href="#">me</a>
+		                </li>
+		                <li>
+		                  <span title="connect" aria-hidden="true" data-icon="&#x2d;"></span>
+		                  <a href="#">connect</a>
+		                </li>
+
+		            <h5>content</h5>
+		                <li id="brandsListTrigger">
+		                  <span title="brands" aria-hidden="true" data-icon="&#x21;"></span>
+		                  <a href="#">
+		                    brands
+		                    <div id="brandsCaret"></div>
+		                  </a>
+		                
+		                </li>
+		                 {#  @DROPDOWN LIST  #}
+		                <ul class="dropdownList" id="brandsList">
+		                      <li><a href="">brand1</a></li>
+		                      <li><a href="">brand2</a></li>
+		                      <li><a href="">brand3</a></li>
+		                      <li><a href="">brand4</a></li>
+		                    </ul> 
+		                <li id="doingsListTrigger">
+		                  <span title="do&iuml;ngs" aria-hidden="true" data-icon="&#x22;"></span>
+		                  <a href="#">
+		                    do&iuml;ngs
+		                    <div id="doingsCaret"></div>
+		                  </a>
+		                </li>
+		                 {#  @DROPDOWN LIST  #}
+		                  <ul class="dropdownList" id="doingsList">
+		                    <li><a href="">category1</a></li>
+		                    <li><a href="">category2</a></li>
+		                    <li><a href="">category3</a></li>
+		                    <li><a href="">category4</a></li>
+		                  </ul> 
+		                <li>
+		                  <span title="library" aria-hidden="true" data-icon="&#x24;"></span>
+		                  <a href="#">library</a>
+		                </li>
+		          </ul>
+		    </nav>
+{% endblock %}{# ============================================ N END ====================================== #}
+
+
+
+
+
+
+{# code executed in here lives inside of a body > div.pagewrap}
+
+{% block feature %}{# ================================== FEATURE BLOCK =================================== #}
+
+			<aside class="feature_wrapp"><!--column size-->
+
+
+				<div class="library_row"><!--row-->
+
+					{% for item in result_list %}
+						{% spaceless %}
+						{% if item.img_363 %}
+						<a href="#" class="library_item">
+								<div class="image_container">
+										<img class="content_thumb" src="{{MEDIA_URL}}{{item.img_186}}">
+						  </div><div class="title_and_meta_container">
+									<h6 class="title_of_content">{{item.i_caption}}</h6>
+									<div class="date_of_upload">{{item.upload_date|timesince}} ago</div>
+								</div>
+						</a>
+						{% elif item.a_icon %}
+							<a href="#" class="library_item">
+								<div class="image_container">
+					        		<img class="content_thumb" src="{{MEDIA_URL}}{{item.a_icon}}">
+						  </div><div class="title_and_meta_container">
+									<h6 class="title_of_content">{{item.a_title}}</h6>
+									<div class="date_of_upload">"{{item.upload_date|timesince}} ago"</div>
+								</div>
+						</a>
+						{% elif item.t_icon %}
+						<a href="#" class="library_item">
+							<div class="image_container">
+					        	<img class="content_thumb" src="{{MEDIA_URL}}{{item.t_icon}}">
+					  </div><div class="title_and_meta_container">
+								<h6 class="title_of_content">{{item.t_title}}</h6>
+								<div class="date_of_upload">"{{item.upload_date|timesince}} ago"</div>
+							</div>
+						</a>
+						{% elif item.v_title %}
+						<a href="#" class="library_item">
+							<div class="image_container">
+					        	<img class="content_thumb" src="{{MEDIA_URL}}{{item.v_icon}}">
+					  </div><div class="title_and_meta_container">
+								<h6 class="title_of_content">{{item.v_title}}</h6>
+								<div class="date_of_upload">"{{item.upload_date|timesince}} ago"</div>
+							</div></a>
+						{% endif %}
+						{% endspaceless %}
+					{% endfor %}
+
+
+
+
+
+
+				</div>
+			</aside>
+
+{% endblock %}{# ============================================ F END ========================================= #}
+
+
+
+{% block feature_modals %}{# ======================= FEATURE MODAL BLOCK ================================== #}
+
+
+{% endblock %}{# =========================================== FM END ========================================= #}
+
+{% block js_feature_loads %}{# ======================== JS FEATURE BLOCK ========================================= #}
+
+	<script src="../static/javascripts/library.js" type="text/javascript"></script>
+
+{% endblock %}{# ========================================== JSF END ========================================= #}
+
+{% block toggle_statements_global %}{# ================= DJANGO TOGGLE GLOBAL ===================================== #}
+		
+	 
+			<script type="text/javascript">
+			$(function() {
+				{% if toggle == "image_info_modal" %}
+					$('#imagesUploadModal').reveal(); 
+
+				{% elif toggle == "video_info_modal" %}
+					$('#videoUploadModal').reveal();
+					
+				
+				{% elif toggle == "audio_info_modal" %}
+					$('#audioUploadModal').reveal();    
+					
+				{% endif %}  
+			});
+			</script>
+		
+		
+	<!--<button data-reveal-id="imagesUploadModal">did the images upload?</button>
+		<button data-reveal-id="videoUploadModal">did the video upload?</button>
+		<button data-reveal-id="audioUploadModal">did the audio upload?</button> -->
+		
+{%endblock%}
+
+    </body>
+</html>

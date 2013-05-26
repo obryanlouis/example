@@ -1,0 +1,675 @@
+
+//NOTES:
+//FORMS: all the form attributs and Ids are int he models.py file and can be edited thru there.
+//SELECTS : All select widgets are injected with the chosen plugin, some of the styles and atributes of CHOSEN are in the plugin.scss adn plugin.js files.
+
+/*--------------------------------------------------------------ALL-------------------------*/
+* {
+	padding:0; margin:0; //reset browsers css just in case
+	font-family: "Helvetica Neue",Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+/*-------------------------------------------------------------@VARIABLES-----------------*/
+$wrapsize: 330px;
+$formHeight: 55;
+$borderColor: rgb(230,230,230);
+/*-------------------------------------------------------------@JQUERY CLASSES------------*/
+.highlightTog {
+		background-color : rgb(135,133,133);
+			border :1px solid rgb(200,200,200);
+			   -moz-box-shadow : inset 0px 0px 10px rgb(200,200,200);
+  			-webkit-box-shadow : inset 0px 0px 10px rgb(200,200,200);
+  					box-shadow : inset 0px 0px 10px rgb(200,200,200);
+} 
+/*-------------------------------------------------------------@ERROR CLASSES------------*/
+	section.err { //all Errors formating
+			float: left;
+			width: $wrapsize - 6;
+			height: 25px;
+			margin: 3 0 -3 0;
+			background-color: rgb(255,170,170);
+			padding: 0 3 0 3;
+			-moz-box-shadow:    inset 0 1px 5px rgba(0,0,0,.35);
+   			-webkit-box-shadow: inset 0 1px 5px rgba(0,0,0,.35);
+   			box-shadow:         inset 0 1px 5px rgba(0,0,0,.35);
+
+   			&.overAll { //overall error messages for a full form
+   				margin: 3 0 0 0;
+   				padding: 7 0 0 6;
+   				height: 35px;
+   			}
+   			&.tall{   //SLong msgs in the error field of the password reset
+   				margin: 3 0 3 0;
+   				padding: 7 6 10 6;
+   				width: $wrapsize - 12;
+   				height: 39px;
+   			}
+   			&.midErr { //Errors on registerplus 
+   				width: $wrapsize/1.7 - 7;
+   			}
+   			&.smallErr {
+   				width: ($wrapsize - 9)-($wrapsize/1.7);
+   				margin-left: 1px;
+   			}
+/*INVISBLEBOXHACK used to aling non error boxes with the movement of Errored boxes.
+/*Takes up space but not visibility.*/
+   			&.whiteErrStandIn { 
+   			float: left;
+			width: $wrapsize/1.7 - 10;
+			height: 25px;
+			margin: 3 0 -3 0;
+			background-color: white;
+			padding: 0 3 0 3;
+			-o-box-shadow:      none;
+			-moz-box-shadow:    none;
+   			-webkit-box-shadow: none;
+   			box-shadow:         none;
+   			}
+ /* type and Sprite stylign for Error msgs and the X sprite */
+   			ul li{
+   				list-style:none;
+   				margin: 5 0 0 5px;
+   				padding: 0 0 0 15px;
+   				background: url('../sprites/overbots_half.png') no-repeat -240px -5px;
+   				//text
+   				color: rgb(100,81,81);
+   				font-size: 9pt;
+   				font-weight: bold;	
+   			}
+	}
+/*-------------------------------------------------------------@WRAPPER------------*/
+body div#wrapper{ // basic width wrapper for the whole page
+	position: relative;
+	width: $wrapsize;
+	margin:20 auto 0 auto;
+/*-------------------------------------------------------------@LOGO------------*/
+		h1#riotryLogo { //@RIOTRY LOGO
+				position: relative;
+				color: rgb(51,51,51);
+				font-weight: bold;
+				font-size: 100pt;
+				margin: 0 0 0 -8;
+				letter-spacing: 2px;
+		}
+		hr#separationLine { //@SeparationLine
+			position:relative;
+			margin: 13 0 0 0;
+			border: 0;
+    		height: 1px;
+    		background: rgb(170,170,170);
+		}
+/*-------------------------------------------------------------@toggle buts------------*/
+		section#sectiontoggle {//@TOGGLE SECTIONS
+			button {
+				float:left;
+				margin: 3 0 0 -1;
+				border: 1px solid rgb(232,232,232);
+				background-color: rgb(245,243,243);
+				height: 40px;
+				width: $wrapsize/1.99;
+				//TYPE
+				padding:0 auto 0 auto;
+				font-weight: bold;
+				font-size: 12pt;
+				color: rgb(80,80,80);
+				&:active, a:focus{
+					background: url('../sprites/overbots_half.png') no-repeat -66px -50px;
+				}
+			}
+		}
+/*----------------------------------------------------@WRITEINFORMS------------*/
+		section form.writeIn input{// Covers all forms inside the WrtieIn class with a basic style
+				float: left;
+				font-family: "HelveticaNeue-Light",helvetica;
+       			font-weight: lighter;
+        		margin: 3 0 0 0;
+				border: 1.5px solid $borderColor;
+				height: $formHeight;
+				width: $wrapsize;
+				//text
+				padding: 10;
+				color:rgb(80,80,80);
+				font-size: 11pt; 
+		}
+/*-------------------------------------------------------------@LOGIN------------*/
+		section.loginSectog{ /*@LOGIN SECTION - hold all login related forms and style and some of the style for the PASSWORD RESET */
+				transition: display 2s;
+				-moz-transition: display 2s; 
+				-webkit-transition: display 2s; 
+				-o-transition: display 2s; 
+
+			form input { 
+				/*Placeholder text style for the Login (only works on firefox, chrome and safari - no opera)*/
+         		&:-moz-placeholder { font-size:10pt; color: rgb(190,190,190);}
+          		&::-webkit-input-placeholder { font-size:10.5pt; color:rgb(190,190,190); }
+
+          		/* Resizes Password to allow for space on the login form */
+				&[type="password"] { //PASSWORD1
+					width: $wrapsize - $formHeight;
+				}
+				/* login submit only in the login Section */
+				&[type="submit"] { //@LOGIN SUBMIT FORMS
+					background: url('../sprites/overbots_half.png') no-repeat -8px -6px;
+					border:none;
+					//border-bottom: solid 1px rgb(02,104,104);
+					width:$formHeight;
+					height:$formHeight;
+					background-color:rgb(102,204,204);
+					color:white;
+					&:active {
+						background: url('../sprites/overbots_half.png') no-repeat -8px -64px;
+					}
+				}
+				/* controls the email for the password reset email field */
+				&#id_email {
+					width:$wrapsize - $formHeight;
+					margin-bottom:3px;
+				}
+			}
+			 a { /* Link for the password reset form */
+			 	float: left;
+			 	margin: 5 0 0 0;
+			 	color: rgb(210,210,200);
+			 	font-size: 10pt;
+			 	text-decoration: none;
+			 	font-weight: bold;
+			 	&:hover, &:active {
+			 		color: rgb(100,100,100);
+			 		font-weight: bold;
+			 		text-decoration: underline;
+			 	}
+			 } 
+/*--------------------------------------------------------@RESET PASSWORD------------*/
+			/*Top tittle Container*/
+			ul#pass_res { 
+			 	background-color:rgba(35,165,222,.75);
+			 	padding:5;
+			 	margin: 5 0 3 0 ;
+			 	-moz-border-radius: 2px;
+			 	-webkit-border-radius: 2px;
+			 	-o-border-radius: 2px;
+			 	border-radius: 2px;
+			 	
+			 	h1 { /* password reset */
+			 		color:white;
+			 		margin: 0;
+			 	}
+			}
+
+			p { //Forgot password bottom explenation
+			 	float: left;
+			 	margin: 5 0 0 0;
+			 	color: rgb(120,120,120);
+			 	font-size: 12pt;
+			 	font-weight: lighter;
+			 	&#smaller {
+			 		margin: 3 0 0 0;
+			 		font-size: 10pt;
+			 		color: rgb(160,160,160);
+			 		font-weight: lighter;
+			 	}
+		 	}
+		 	div#double_wrapper {
+		 		position: relative;
+		 		margin: 0 0 0 0;
+
+		 	span#plcehld{ // Fake placeholder for the reset Pasword form - why - troubles accesing the Django code for it
+/*/////// OUT TILL FF POSITION GETS FIXED///////because, ff and opera's different treatment of absolutes seems to have no current solution (even when browser is reset on the top)*/
+		 			position: absolute;
+		 			top: 22px;
+		 			left:10px;
+		 			font-size:12pt;
+		 			font-weight: lighter; 
+		 			color: rgb(190,190,190);
+		 			//display:none; 
+		 		}
+		 	}
+		} 
+/*-------------------------------------------------------------@REGISTER HOMEPAGE------------*/
+		section#registerSec { /* register section on the homepage */
+			display: none;
+				span {
+				position: relative;	
+				top: 4;
+			 	color: rgb(210,210,200);
+			 	font-size: 10pt;
+			 	text-decoration: none;
+			 	font-weight: lighter;
+			}	
+			input{ 
+				&[type=submit] { /* submit button style and sprites */
+						background: url('../sprites/overbots_half.png') no-repeat -7px -123px;
+						background-color:rgb(255,204,102);
+						color:white;
+						&:active{
+						background: url('../sprites/overbots_half.png') no-repeat -7px -185px;
+						}
+					}
+				}
+			/* Link style for the terms ans condition section */
+				 a {
+			 	color: rgb(210,210,200);
+			 	font-size: 10pt;
+			 	text-decoration: none;
+			 	font-weight: bold;
+			 		&:hover, &:active {
+			 			color: rgb(100,100,100);
+			 			font-weight: bold;
+			 			text-decoration: underline;
+			 		}
+			 	} 
+			}   // hompageRegister Sections end
+
+/*-------------------------------------------------------------@REGISTERPLUS------------*/
+
+		section#registerplus {//@REGISTER PLUS
+			position: relative;
+			height: 350px;
+			margin: -13 0 0 0;
+				span { /* a bit of a hack to get the Chosen placeholder in the same colors for Chosen Style check the Plugins.scss file*/
+			 		color: rgb(200,200,200);
+			 		font-weight: lighter;
+			 	}
+			/*----------------------------@WRAPPERS--------------------------------*/
+			div {
+				/* WRAPPS THE REGISTERPLUS FORMS TO THE LEFT SIDE OF THE SCREEN */
+				/*includes the FIRST NAME,  LAST NAME, and CITY NAME. */
+				&#left_form_wrapper {
+					float: left;
+					margin-top: 15;
+					//background-color: red;
+					width: $wrapsize/1.7;
+					overflow: hidden;
+				}
+				/* WRAPPS THE REGISTERPLUS FORMS TO THE RIGHT SIDE OF THE SCREEN */
+				/*includes the MIDDLE NAME, GENDER SELECT and STATE NAME.    */
+				&#right_form_wrapper {         
+					float: right;
+					margin-top: 15;
+					//background-color:blue;
+					width: $wrapsize/2.44;
+					//overflow: hidden;
+				}
+			}
+				 input { 
+/*Placeholder text style for the registerPlus forms (does not work on opera or IE...then agian what works in IE?)*/
+         		 	&:-moz-placeholder { font-size:10pt; color: rgb(190,190,190);}
+          			&::-webkit-input-placeholder { font-size:10.5pt; color:rgb(190,190,190); }
+
+/* CONTROLS THE INDIVIDUAL FORMS INSIDE THE WRAPPERS OF THE REGISTERPLUS FORMS */
+					&[placeholder="first"] { //@FIRSTNAME
+						width: $wrapsize/1.71;
+					}
+					&[placeholder="middle (optional)"] { //@MIDDLE
+						width: ($wrapsize - 3)-($wrapsize/1.7);
+						margin-left: 1;
+					}
+					&[placeholder="last"] { //@LAST
+						width: $wrapsize/1.71;
+					}
+					&[placeholder="city"]{ //@CITY
+						width: $wrapsize/1.71; 
+					}
+					&[placeholder="state"]{//@STATE
+						width: $wrapsize/2.66+10.5; 
+						margin-left: 1;
+					}
+					&[placeholder="country"]{//@COUNTRY
+						width: $wrapsize/2.7+10; 
+						margin: 3 0 0 3;
+					}
+				&[type=submit] { //@REGISTER SUBMIT FORMS
+						background: url('../sprites/overbots_half.png') no-repeat -7px -123px;
+						background-color:rgb(255,204,102);
+						color:white;
+						&:active{
+						background: url('../sprites/overbots_half.png') no-repeat -7px -185px;
+						}
+					}
+				}
+
+			 	p { //@POP UP DESCRIPTIONs (appear when location and DOB forms are cliked)
+			 		float: left;
+			 		display: none;	
+			 		margin: 3 0 -3 0;
+			 		width: $wrapsize/1.83 ; // for the medium block ont he left_form_wrapper
+			 		height: 13px;
+			 		background-color: rgb(140,140,140);
+			 		border: 1px solid $borderColor;
+			 		border-bottom: 0;
+			 		color: white;
+   					font-size: 9pt;
+   					font-weight: normal;
+   					padding: 3 6 5 6;
+   					&#onSmallerBlock{ // for the smaller block ont he right_form_wrapper
+   						width: $wrapsize/2.7;
+   					}
+   					&.descDOB {    // for the longer DOB msg
+   						width: $wrapsize - 14;
+   					}
+			 	}
+			 	
+			 	//@CHOSEN FORMS
+/* all the select forms use the Chosen plugin to fucntion in a proper chrossbrowser manner, half of the style is in the css the other half int eh plugin.js script */
+			 	div#gend { //@GENDER container (direct link to field under and in plugins.js)
+			 		float: left;
+			 		margin: 3 0 0 1;
+			 		width: 100px;
+			 		select {
+			 			width: ($wrapsize - 3)-($wrapsize/1.7);
+			 		}
+			 	}
+			 	div#date { //@DOB
+			 		float: left;
+			 		width: $wrapsize;
+					margin: 3 0 0 0;
+			 		select {
+			 			float: left;
+			 			width: $wrapsize/3 - 2.51;
+			 		}
+			 	}
+			 	div#cntry { //@COUNTRY
+			 		float: left;
+			 		width: $wrapsize;
+			 		margin: 3 0 0 0;
+			 		select {
+			 			float: left;
+			 			width: $wrapsize;
+			 		}
+			 	}
+			a#whyLink {  //@WHY DOB LINK
+				display: none;
+				float : right;
+				color: rgb(200,200,200);
+			 	font-size: 10pt;
+			 	text-decoration: none;
+			 	font-weight: normal;
+			 	&:hover {
+			 		color: rgb(100,100,100);
+			 		font-weight: normal;
+			 	}
+			}
+
+			form select{//@BIRTHDAY
+				float: left;
+				margin: 3 0 0 0;
+				border: 1.5px solid $borderColor;
+				background-color: transparent;
+				height: $formHeight;
+				width: $wrapsize;
+				border-radius: 1;
+				//text
+				padding: 10;
+				color: rgb(190,190,190);
+				font-size: 11pt;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				-o-appearance: none;
+
+				.chzn-slct-gender{ //Targets the gender form directly 
+					margin-left: 3;
+					position:absolute;
+					width: ($wrapsize - 3)-($wrapsize/1.7);
+				}
+				&#month { //@MONTH
+					width:($wrapsize/1.4)/2.5+13;
+					padding-left:26;
+				}
+				&#day { //@DAY
+					width:($wrapsize/1.4)/4;
+					margin-left: 3;
+					padding-left:15;
+				}
+				&#year { //YEAR
+					width:($wrapsize/1.6)/3+2;
+					margin-left: 3;
+					padding-left:17;
+				}
+			}
+		}
+
+/*------------------------------------------------------@UBUILD------------*/
+
+			section#buildU { //BUILD YOURSELF PAGE
+				h5 { // Build youself text
+					font-size: 14pt;
+					font-weight:lighter;
+					color: rgb(80,80,80);
+					text-align: right;
+					margin:3 0 0 0;
+				}
+				ul { //list style container
+					margin: -2 0 0 0;
+					div.netRect , div.catRect , div.meRect , div.brandRect  {
+						position: absolute;
+						left: 5;
+						margin-top:-8;
+						height: 50px;
+						width: 5;
+					}
+					//@COLOR side section INDICATORS
+					.netRect{ background-color:rgb(245,245,0);}
+					.catRect{ background-color:rgb(35,165,222);}
+					.meRect{ background-color:rgb(84,184,72);}
+					.brandRect{ background-color:rgb(246,141,39);}
+
+					//Links container
+					a{text-decoration:none;}
+
+
+				li{ // List Text Style
+					list-style:none;
+   					margin: 10 0 0 -33px;
+   					padding: 7 0 0 35px;
+   					color: rgb(204,204,204);
+   					font-size:18pt;
+   					font-weight:lighter;
+   					height: 41px;
+   					border: solid 1px white;
+   					transition: font-size .1s, color .5s, box-shadow .5s;
+					-moz-transition: font-size .1s, color .5s, box-shadow .5s; 
+					-webkit-transition: font-size .1s, color .5s, box-shadow .5s;
+					-o-transition: font-size .1s, color .5s, box-shadow .5s; 
+					
+   					&:hover {
+   						font-size:20pt;
+   						color: rgb(100,100,100);
+   						-o-box-shadow :  -1px 2px 6px 1px rgb(230,230,230);
+   						-moz-box-shadow : -1px 2px 6px 1px rgb(230,230,230);
+  						-webkit-box-shadow : -1px 2px 6px 1px rgb(230,230,230);
+  						box-shadow : -1px 2px 6px 2px rgb(230,230,230);
+   						background-color: rgb(250,250,250);
+   						right : 0;
+   						
+   					}
+				}
+			}
+		}
+
+/*---------------------------------------------------------@REGQUICKSTEPS------------*/
+ section.regSteps { //section for confirmation email sent page and activation link expeired
+ 	
+//CONFIRMATION EMAIL SENT PAGE --------------------------------------------
+ 	ul#sent_con_email {
+		float: left;
+			width: $wrapsize - 6;
+			height: 55px;
+			margin: 8 0 0 0;
+			background-color: rgb(102,204,51);
+			padding: 8 3 2 3;
+
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			border-radius: 2px; 
+			-khtml-border-radius: 2px; 
+
+			-moz-box-shadow:     0px 5px 10px 1px rgba(0,0,0,.25);
+   			-webkit-box-shadow:  0px 5px 10px 1px rgba(0,0,0,.25);
+   			box-shadow:          0px 5px 10px 1px rgba(0,0,0,.25);
+
+ 		li {    //@EMAILSENT 
+ 				position: relative;
+ 				list-style:none;
+   				margin: 10px 0px 0 15px;
+   				padding: 0 0 0 50px;
+   				background: url('../sprites/overbots_half.png') no-repeat -8px -246px;
+   				//text
+   				color: white;
+   				font-size: 10pt;
+   				font-weight: bold;
+   				line-height: 35px;
+ 		}
+ 	}
+  	div#inbox_sprite { //@INBOX SPRITE
+ 		float: left;
+ 		width: 300px;
+		height: 160px;
+		margin: 30 0 0 85;
+ 		background: url('../sprites/overbots_half.png') no-repeat  -176px -344px;
+
+ 	} 
+
+ 	span {   ///please Check your email text
+ 		float: left;
+ 		margin: 0 50 190 70;
+ 		font-size: 12pt;
+ 		color: rgb(200,200,200);
+ 		font-weight: bold;
+ 	}
+
+	//@EXPIRED ACTIVATION PAGE ------------------------------------------------------
+ 	 	ul#activation_exp {    
+			float : left;
+			width: $wrapsize - 50;
+			margin: 0 0 0 0;
+			background-color: rgb(255,153,51);
+			padding: 0 25 20 25;
+
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			border-radius: 2px; 
+			-khtml-border-radius: 2px; 
+
+			-moz-box-shadow:     0px 5px 10px 1px rgba(0,0,0,.25);
+   			-webkit-box-shadow:  0px 5px 10px 1px rgba(0,0,0,.25);
+   			box-shadow:          0px 5px 10px 1px rgba(0,0,0,.25);
+
+ 		li {  //Warning Sprite
+ 				position: relative;
+ 				list-style:none;
+   				margin: 10px 0 0 -12px;
+   				padding: 0 0 0 45px;
+   				background: url('../sprites/overbots_half.png') no-repeat 0px -293px;
+   			
+   				color: white;
+   				font-size: 15pt;
+   				font-weight: bold;
+   				line-height: 50px;	
+ 			}
+
+ 			hr { //@WARNING LINE
+ 				position: relative;
+ 				margin: 0 0 8 0;
+ 				border: 0;
+    			height: 1px;
+    			background: rgb(100,100,100);
+ 			}
+
+ 			strong {
+ 				color: rgb(200,200,200);
+ 				font-weight: bold;
+ 			}
+
+   		em { //Alert description
+   				position: relative;
+   				display:block;
+				color: white;
+				width: 250px;
+				font-style: normal;
+				font-weight: bold; 
+				font-size:10pt;
+   		}
+ 	}
+ 		ul#dolnks { //@ACTION LINKS ForResending comf email and Back to register
+
+ 				float: left;
+ 				width:$wrapsize - 19;
+ 				height: 40px;
+   				background-color: rgb(245,245,245);
+   				margin: 0 0 0 0;
+   				padding: 0 3 10 15;
+
+				-moz-border-radius: 2px;
+				-webkit-border-radius: 2px;
+				border-radius: 2px; 
+				-khtml-border-radius: 2px; 
+
+				-moz-box-shadow:     0px 5px 10px 1px rgba(0,0,0,.25);
+   				-webkit-box-shadow:  0px 5px 10px 1px rgba(0,0,0,.25);
+   				box-shadow:          0px 5px 10px 1px rgba(0,0,0,.25);
+   			   	
+ 				&:hover {
+ 					background-color:rgb(255,255,255);
+ 				}
+   			   	&:active {
+   					background-color:rgb(200,200,200);
+   					-moz-box-shadow:     inset 0px 0px 10px 1px rgba(0,0,0,.25);
+   					-webkit-box-shadow:  inset 0px 0px 10px 1px rgba(0,0,0,.25);
+   					box-shadow:          inset 0px 0px 10px 1px rgba(0,0,0,.25);
+   				}
+   				a{text-decoration: none;}
+   			li { //@ LINK BOXES
+   			 	position: relative;
+ 				list-style:none;
+   				padding: 2 0 0 45px;
+   				background: url('../sprites/overbots_half.png') no-repeat;
+   				color: rgb(100,100,100);
+   				font-size: 10pt;
+   				font-weight: bold;
+   				line-height: 50px;	
+
+   				//@ LINK SPRITES
+   				&#resend_act {
+   					background-position: -240px -63px;
+   				}
+   				&#re_register {
+   					background-position: -239px -20px;
+   				}
+   			}
+   		}
+}
+/*-------------------------------------------------------------@COMPINFO------------*/
+//company links at the bottom of the page (warning = registerplus tends to act differently than all ofther pages with this section)
+			section#companyDetails{
+				position: relative;
+				margin-top:400px;
+				width: $wrapsize;
+			 
+			 a { //@All Company Links
+			 	float: center;
+			 	margin: 0;
+			 	top: 300; 
+			 	color: rgb(220,220,220);
+			 	font-size: 10pt;
+			 	text-decoration: none;
+			 	font-weight: lighter;
+			 	&:hover {
+			 		color: rgb(100,100,100);
+			 		font-weight: normal;
+			 	}
+			 } 
+				 span { //for Riotry and copyright symble
+				 	font-size: 12px;
+			 		color: rgb(220,220,220);
+          			margin: 0 auto 0 auto;
+			 	}
+			 }
+		}
+
+
+
+		
+
+
+
+
+

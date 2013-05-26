@@ -1,0 +1,727 @@
+@import "_skeleton";
+@import "_styleGuide";
+//Conditional stylesheets
+@import "_mobile_&_tablet_backb_global";
+
+html {
+	width:100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width:100%;
+}
+
+
+
+//============================================
+// Chrome Frame prompt
+// ===========================================
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+//============================================
+// Font load
+// ===========================================
+@include iconFont;
+
+//============================================
+// Accesability 
+// ===========================================
+	.screen_reader_text {
+	    border: 0;
+	    clip: rect(0 0 0 0);
+	    height: 1px;
+	    margin: -1px;
+	    overflow: hidden;
+	    padding: 0;
+	    position: absolute;
+	    width: 1px;
+	
+// Extends the .visuallyhidden class to allow the element to be focusable
+//when navigated to via the keyboard: h5bp.com/p
+
+		&.focusable:active,
+		&.focusable:focus {
+		    clip: auto;
+		    height: auto;
+		    margin: 0;
+		    overflow: visible;
+		    position: static;
+		    width: auto;
+		}
+	}
+
+//============================================
+// independent elements
+// ===========================================
+
+
+//MSG THUMBNAIL
+img.thumbnail_basic  {
+	@extend .es-img-thumbnail-basic;
+}
+
+//TOGGLE NAV BUTTON
+//hide in case js breaks
+button.nav_tog_button {
+	  display:none;
+} 
+
+
+//============================================
+// Dropdowns
+// ===========================================
+
+//--------//@DROPDOWN ACTIVE JQUERY CLASS
+.active_dropdown:before {
+	@extend .sg-trigger-active-dropdown;
+}
+
+
+//@INBOX DROPDOWN ============================
+div.dropdown_container{
+	@extend .dd-basic-container;
+	margin-left: -120px;
+
+	ol.dropdown_inbox  {
+		@extend .dd-msg-notes-basic-box;
+
+		li {
+			//MINI HEADER MSG
+			&.msg_mini_header {
+				@extend .dd-mini-header;
+				//MSG section description
+				em{ 
+					@extend .dd-mini-header-section-description;	
+				}
+				//VIEW ALL MSG top
+				a.inbox_section_link {
+					@extend .dd-mini-header-section-link;
+					&:hover{
+						@extend .dd-mini-header-section-link-hover;
+					}
+				}
+			}
+
+			//MINI FOOTER MSG
+			&.msg_mini_footer {
+				@extend .dd-mini-footer;
+
+				//VIEW ALL MSG BOTTOM
+				a.msg_section_link_bottom {
+					@extend .dd-mini-footer-section-link;
+					&:hover{
+						@extend .dd-mini-footer-section-link-hover;
+					}
+				}
+			}
+
+			//MSG PREVIEW CONTAINER
+			&.msg_preview {
+				@extend .dd-hori-msg-box-container;
+
+				a {//MSG LINK BOX
+					@extend .dd-hori-msg-content-box-link;
+					&:hover,&:active {
+						@extend .dd-hori-content-box-link-hover;
+					}
+
+					//MSG SENDERS NAME 
+					h6 {
+						@extend .dd-msger-name;
+					}
+
+					//MSG CONTENT
+					p {
+						@extend .dd-msg-content-preview;
+					}
+
+					//MSG DATE
+					em.msg_time_dropdown {
+						@extend .dd-msg-event-date-stamp;
+					}
+				}
+			}
+		}
+	}
+
+	//@NOTES @DROPDOWN ================================
+	ol.dropdown_notes { 
+		@extend .dd-msg-notes-basic-box;
+		
+		li {
+			//MINI HEADER BOX
+			&.notes_mini_header {
+				@extend .dd-mini-header;
+				//mini header @SECTION DESC
+				em { 
+					@extend .dd-mini-header-section-description;	
+				}
+				//mini header @SECTION LINK
+				a.notes_section_link {
+					@extend .dd-mini-header-section-link;
+					&:hover{
+						@extend .dd-mini-header-section-link-hover;
+					}
+				}
+			}
+
+			//MINI FOOTER BOX
+			&.notes_mini_footer {
+				@extend .dd-mini-footer;
+
+				//mini footer @SECTION LINK
+				a.notes_section_link_bottom {
+					@extend .dd-mini-footer-section-link;
+					&:hover{
+						@extend .dd-mini-footer-section-link-hover;
+					}
+				}
+			}
+
+			//NOTES CONTENT PREVIEW CONTAINER
+			&.notes_preview {
+				@extend .dd-hori-box-container;
+
+				a {//notes content @BOX
+					@extend .dd-hori-notes-content-box-link;
+					&:hover,&:active {
+						@extend .dd-hori-content-box-link-hover;
+					}
+
+					//Notes @TEXT CONTENT
+					p {
+						@extend .dd-notes-content;
+					}
+					p.user_content_preview {
+						@extend .dd-notes-user-content-preview;		
+					}					
+					strong{
+						@extend .dd-notes-strong-text;
+					}
+
+					//notes @DATE
+					em.notes_time_dropdown {
+						@extend .dd-notes-event-date-stamp;
+					}
+				}
+			}
+		}
+	}
+	
+	//@CONNECTIONS @DROPDOWN ==========================
+	ol.dropdown_con { 
+		@extend .dd-msg-notes-basic-box;
+		left:5%;
+		li {
+			//MINI HEADER BOX
+			&.con_mini_header {
+				@extend .dd-mini-header;
+				//mini header @SECTION DESC
+				em { 
+					@extend .dd-mini-header-section-description;	
+				}
+				//mini header @SECTION LINK
+				a.con_section_link {
+					@extend .dd-mini-header-section-link;
+					&:hover{
+						@extend .dd-mini-header-section-link-hover;
+					}
+				}
+			}
+
+			//MINI FOOTER BOX
+			&.con_mini_footer {
+				@extend .dd-mini-footer;
+
+				//mini footer @SECTION LINK
+				a.con_section_link_bottom {
+					@extend .dd-mini-footer-section-link;
+					&:hover{
+						@extend .dd-mini-footer-section-link-hover;
+					}
+				}
+			}
+
+			//connections CONTENT PREVIEW CONTAINER
+			&.con_preview {
+				@extend .dd-hori-box-container;
+
+				a {//connections content @BOX
+					@extend .dd-hori-msg-content-box-link;
+					&:hover,&:active {
+						@extend .dd-hori-content-box-link-hover;
+					}
+
+					//connections @NAME
+					h6 {
+						@extend .dd-msger-name;
+					}
+					button {
+						&.deny_connection {
+							@extend .fe-button-connection-small;
+						}
+						&.accept_connection {
+							@extend .fe-button-connection-small;
+						}
+					}
+					//connections @DATE
+					em.con_time_dropdown {
+						@extend .dd-msg-event-date-stamp;
+					}
+				}
+			}
+		}
+	}
+
+}// END DROPDOWN CONTAINER
+ 
+//@ACCOUNT DROPDOWN ==========================
+div.dropdown_container_account {
+	@extend .dd-basic-container;
+	ol.dropdown_account {
+		@extend .dd-basic-box;
+		li {
+			@extend .dd-basic-list-element;
+			& > a {
+				@extend .dd-basic-anchor-element;
+				&.home_line,
+				&.upload_line {@extend .dd-dropdown-bottom-divider}
+				&:hover {
+					@extend .dd-basic-anchor-element-hover;
+				}
+			}
+		}
+	}
+}
+
+// ============================================
+// @HEADER
+// ============================================
+header.band {
+	@include fontStack;
+	display: inline-block;
+	border-bottom: 1px solid $primary-border-color;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	min-width: 1100px;
+
+        @media only screen and (max-width: 480px) {
+            min-width: 400px; }
+
+		    &:after {
+            content: "\0020";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden; }
+
+	div.header_wrapp {
+		@include container;
+
+		ul.header_list {
+			@include columns(12);
+			@include collapseMargin;
+			@include clearfix;
+			height: 35px;
+			padding: 5px 0 0 0;
+
+			& > li {
+				@include columns(1);
+				@include collapseMargin;
+				height: 100%;
+
+				//RIOTRY LOGO
+				&.header_logo { 
+					@include columns(2);
+					@extend .sg-riotry-logo-nav;
+					margin-left: -5.3%;
+					margin-right:4%;
+
+				}
+
+				a.header_icons {
+					@extend .es-header-icon-anchor;
+					padding-left: 6px; 
+				
+					&:hover, &:active {
+					@extend .es-header-icon-anchor-hover;	
+					}
+
+					&:before {
+						line-height: 1.5;
+					}
+					
+					&[title="notes"]{
+					 	&:before	{
+							line-height: 1.5;
+						}
+					}
+					&[title="connections"]:before {
+						line-height: 1.5;
+					}
+				}
+
+
+				&.header_search_icon {
+					@extend .sg-icon-anchor-header;
+					@include columns(1);
+					@include offset(5);
+					@include omega;
+
+					&:hover, &:active {
+						@extend .sg-icon-anchor-hover-header;	
+					}
+
+					a:before {
+						line-height: 1.7;
+						padding-left: 6px
+					}
+				}
+
+				&.header_user_account_options {
+					@include columns(6);
+					@include collapseMargin;
+					float: right;
+					& > a {
+						@extend .sg-user-options-header;
+						display : block;
+						padding-top:5px;
+						text-align:center;
+						width: 100%;
+						height: 100%;
+
+						&:hover {
+							@extend .sg-user-options-hover-header;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+
+// ============================================
+// @PAGE_WRAPP
+// ============================================
+div.page_wrapp {
+	@include container;
+	@include fontStack;
+
+}
+
+// ============================================
+// @section @utilities_space
+// ============================================
+
+section.utility_space {
+	@include columns(24);
+	@include collapseMargin;
+	height: auto;
+	margin: 7px 0;
+	@include row;
+
+		//@PLUS UPLOAD BUTTON
+		button.quick_upload_button { 
+			@extend .fe-basic-invisible-button;
+			@include columns(2);
+			float: right;
+			margin-right: 5%;
+			height: 42px;
+
+			&:hover { 
+				@extend .fe-basic-invisible-button-hover;
+			}
+			&:active { 
+				@extend .fe-basic-invisible-button-active;
+			}
+
+			a.plus_icon { 
+				@extend .es-header-icon-anchor;
+				color: lighten($icon-color,45%);
+				float: center;
+				padding-top: 10px;
+			}
+		}
+
+
+		// UPLOAD @DROPDOWN CONTAINER 
+		div.dropdown_box {
+			
+			position: relative;
+    		display: none;
+    		float: right;
+    		padding: 0px;
+	    	margin: 0px;
+			@include row;
+
+
+			button {
+				@extend .fe-basic-invisible-button;
+				@include columns(2);
+				@include collapseMargin;
+				float:right;
+				height: 42px;
+				&:hover {
+					@extend .fe-basic-button-hover;
+				}
+				&:active {
+					@extend .fe-basic-button-active;
+				}
+
+
+				///===========FILE (MEDIA) UPLOAD INPUTS==========
+				//Adds a wrapper to all the file inputs to make them
+				//hide the oveflow into looking like buttons
+
+				&.upload_media_button {
+					@extend .hk-upload-input-wrapper;
+
+					label {@extend .screen_reader_text;}
+
+					//ALL FILE UPLOAD INPUTS
+					//makes all file uplaod inputs 
+					//look like buttons
+					input[type="file"] {
+						@extend .hk_upload_input;
+					}
+				}
+
+				span{
+					@extend .es-header-icon-anchor;
+					padding-top: 10px;
+				}
+			}
+		}
+
+}
+
+// ============================================
+// @NAV
+// ============================================
+
+nav {
+	@include columns(5);
+	@include alpha;
+
+	//@PROFILE PIC
+	img { 
+		width: inherit;
+		height:auto;
+		border: .5px solid $secondary-border-color;
+		margin: 0 0 6px 0;
+	}
+
+	//PROFILE PIC @EDIT
+	button.upload_profile_picture_button {
+		display: none;
+		position: absolute;
+		top: 70px;
+		left: 8px;
+		@extend .fe-edit-trigger-button
+	}
+
+	//@USERSNAME
+	a.users_name, a.visited { 
+		@extend .sg-user-name-nav;
+		&:hover,
+		&:active {
+			@extend .sg-user-name-hover-nav;
+		}
+	}
+
+	ul.backb_navigation_list{
+		margin-top: 10px;
+
+		//@SECTIONS
+		h5 { 
+			@extend .sg-section-name-nav;
+			margin: 10px 0 10px 0;
+		}
+
+		li   {
+			height: 23px;
+			padding: 3px 0;
+			&:hover {
+				@extend .sg-list-box-nav-hover;
+			}
+			
+			span { //ICONS
+				@extend .sg-icon-nav;
+				margin-left:2px;
+				&:hover,&:active{
+					color: inherit;//take off if you decide to change li hover
+				}
+			}
+
+			a{ 	//@NETWORK @LINKS
+				@extend .sg-network-links-nav;
+				//NEEDS TO EXTEND THE WHOLE LI SIZE
+				&:hover{ color: inherit;}
+
+			}
+		}
+		
+//============================================
+// DDROPDOWN LIST style
+// ===========================================
+
+		ul.dropdownList { //@BRANDS AND @DOINGS DROPDOWN LIST
+			@extend	.dd-nav-list-container;
+
+			li {
+				@extend .dd-nav-list-element;
+				&:hover{
+					@extend .dd-list-element-hover;
+				}					
+
+				a {
+					@extend .dd-nav-list-link;
+				}
+			}
+		}
+	}
+}
+
+// ============================================
+// @Aside @Feature Section
+// ============================================
+aside {
+	@include columns(19);
+	@include collapseMargin;
+	@include clearfix;
+	height: auto;
+}
+
+
+// ============================================
+// GLOBAL @MODAL 
+// ============================================
+
+
+button.cancel_button { 
+
+	@extend .fe-form-cancel-button;
+	@include columns(2);
+	float: right;
+	bottom: 0px;
+
+	
+	&:hover {
+		@extend .fe-form-cancel-button-hover;
+	}
+	&:active {
+		@extend .fe-basic-cancel-active;
+	}
+}
+
+input.submit_button { 
+	@extend .fe-form-submit-button;
+	@include columns(2);
+	float: right;
+	@include omega;
+	
+	
+
+	&:hover {
+		@extend .fe-form-submit-button-hover;
+	}
+	&:active {
+		@extend .fe-form-submit-button-active;
+	}
+}
+
+
+// ============================================
+// @ MODAL @NOTES UPLOAD
+// ============================================
+
+.reveal_modal_upload_text {
+    @extend .dd-reveal-modal;
+    @include row;
+
+      [data-icon]:before {
+        @include columns(2);
+        font-size: 3em;
+        height: 50px;
+      }
+
+      label { 
+      	@extend .screen_reader_text;
+      }
+
+      input[name="t_title"] {
+      	@extend .fe-title-basic-input;
+        @include columns(11);
+        margin-top: $primary-top-margin;
+      	
+      }
+
+      textarea[name="t_body"] {
+      	@extend .fe-body-basic-textarea;
+          @include columns(11);
+          margin-top: $primary-top-margin;
+          height: 250px;
+      }
+
+}
+
+
+// ============================================
+// @MODAL @MEDIA JUST UPLOADED
+// ============================================
+
+.reveal_modal_upload_images,.reveal_modal_upload_video, .reveal_modal_upload_audio {
+	@extend .dd-reveal-modal;
+	@extend .dd-reveal-modal-large;
+	@include row;
+
+	div.item_style_cover {
+		@extend .es-item-style-container-small;
+
+	}
+
+ 	div.formset_container { 
+ 		@extend .es-item-main-container-small;
+
+ 		img { 
+ 			@extend .es-item-container-small-image;
+ 			
+ 		}
+
+ 		label { @extend .screen_reader_text;}
+
+ 		input {
+ 			@extend .es-item-container-small-input;
+ 		}
+
+ 		textarea {
+ 			@extend .es-item-container-small-textarea;
+ 		}
+
+ 		div.item_util_bar {
+ 			@extend .es-item-container-small-utility-bar;
+ 		}
+ 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

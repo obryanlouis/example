@@ -1,0 +1,34 @@
+
+//
+// Riotry Styles
+// Mixins, Variables & Functions not relating to style
+// Copyright 2013 by Paul Andre Rada
+//
+
+
+//============================================
+//	@VARS
+//============================================
+
+
+
+
+
+//============================================
+//	@FUNCTIONS
+//============================================
+
+
+@function findCenter($conWidth, $imgWidth){
+    @return  $conWidth - $imgWidth;
+}
+
+
+
+//============================================
+//	@MIXINS
+//============================================
+
+@mixin centerImgX($conWidth,$imgWidth){
+    margin-left: (findCenter($conWidth, $imgWidth)/2);
+}  

@@ -1,0 +1,578 @@
+//
+// Riotry Styles
+// Mixins & Variables that only realate to style
+// Positioning elements in the _skeleton files
+// Copyright 2013 by Paul Andre Rada
+//
+
+@import "compass/css3/background-clip";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/utilities/general/hacks";
+@import "compass/css3/shared";
+@import "compass/css3/opacity";
+@import "compass/css3/regions";
+@import "compass/css3/text-shadow";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "_css-triangle";
+@import "compass/reset";
+@import "_normalize";
+@import "_tools";
+
+//RIOTRY FRAMEWORK 
+//@imports at the bottom of page
+
+@include normalize;
+
+//@GLOBAL Variables
+//=================================================
+
+//main
+$primary-brand-color 			: #F9C429;
+$secondary-brand-color  		: #8D9092;
+$terciary-brand-color   		: #333333; 
+
+//backgrounds
+$header-background-color 		: #FFFFFF;
+$body-background-color 			: #FFFFFF;
+$modal-background-color         : #FFFFFF;
+
+//borders
+$primary-border-color 			: rgba(0, 0, 0, 0.1);
+$secondary-border-color 		: lighten($primary-border-color,20%);
+
+//buttons
+$button-action-color  			: $primary-brand-color;
+$button-action-hover-color  	: $primary-brand-color;
+$button-action-active-color  	: $primary-brand-color;
+$button-tab-color				: lighten($secondary-brand-color, 30%);
+$button-tab-hover-color			: null;
+$button-tab-active-color		: null;
+$button-subtle-color	 		: #FFFFFF;
+$button-solid-color				: $terciary-brand-color;
+
+//boxes
+$box-list-hover-color			: #f4f4ef;
+
+//text
+$text-user-name					: #646565;				
+
+//list text (all links)
+$text-list-color				: darken(#675d48,10%);
+$text-list-active-feature-color : $primary-brand-color;
+$text-list-hover-color			: lighten($text-list-color,100%);
+$text-section-color             : #cbc3b9;
+
+//info text (basically tiny text)
+$text-info-area					: lighten($text-list-color, 50%);
+
+//icons
+$icon-color 					: darken(#9b9486,20%);
+$icon-hover-color 				: darken($icon-color, 30%);
+$icon-active-color 				: null;
+
+//content
+$text-content-color				: #AAAAAA;
+$text-content-link-color		: #010101;
+$text-content-link-hover-color	: lighten($text-content-link-color,40%);
+
+//panels
+$content-panel-color  	 		: #FFFFFF;
+$meta-data-panel-color   		: lighten($secondary-brand-color, 30%);
+
+//Font
+$font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-default-px	: 16;
+
+
+//functions
+//=================================================
+
+//return ems of points
+@function pointToEms($points) {
+	@return $points / $font-default-px;
+}
+
+//Global Mixins
+//=================================================
+
+//Spits out ems with the size of the inputp oints.
+@mixin font-size($pt){
+	font-size: pointToEms($pt)+em; 
+}
+
+@mixin fontStack {
+	font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+	font-style: normal;	    
+	font-weight: normal;
+}
+
+@mixin logoStyle {
+	color : $secondary-brand-color;
+	letter-spacing:-.5px;
+	font-weight:bold;
+}
+
+@mixin customFont {
+	//@font-face {
+//	    font-family: 'FontName';
+//	    src: url('../fonts/FontName.eot');
+//	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+//	         url('../fonts/FontName.woff') format('woff'),
+//	         url('../fonts/FontName.ttf') format('truetype'),
+//	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+//	    font-weight: normal;
+//	    font-style: normal; }
+	
+}
+
+@mixin iconFont  {
+	@font-face {
+		font-family: 'rioticons';
+		src:url('../fonts/rioticons.eot');
+		src:url('../fonts/rioticons.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/rioticons.svg#icomoon') format('svg'),
+			url('../fonts/rioticons.woff') format('woff'),
+			url('../fonts/rioticons.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+}
+
+
+
+//============================================
+//          	STYLE EXTEND CLASSES
+//============================================
+
+//============================================
+// ICONS
+// before selector targets dat-icon to show before content on tag
+// ===========================================
+[data-icon]:before {
+	font-family: 'rioticons';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+//============================================
+// ESSENTIALS STYLES
+// ===========================================
+
+
+//@IMG @THUMBNAIL STYLES
+.sg-img-thumbnail-basic {
+
+}
+
+//@HR BASIC STYLE
+.sg-hr-basic {
+	border: 0;
+	height: 0;
+	border-top: 1px solid $primary-border-color;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+//============================================
+// HEADER STYLES
+// ===========================================
+
+//RIOTRY @LOGO HEADER
+.sg-riotry-logo-nav{
+	@include logoStyle;
+	@include font-size(21);
+}
+// HEADER @ICONS
+.sg-icon-anchor-header {
+	@include font-size(16);
+	color: $icon-color;
+	text-decoration:none;
+}//HOVER
+.sg-icon-hover-anchor-header {
+	color: $icon-hover-color;
+	background-color: darken($header-background-color, 10%);
+}
+//HEADER @ACOUNT OPTIONS 
+.sg-user-options-header {
+	@include font-size(15);
+	text-decoration: none;
+	color: $text-user-name;
+}//HOVER
+.sg-user-options-hover-header {
+	background: $button-action-hover-color;
+}
+
+//============================================
+// MOBILE @BANDS
+// ===========================================
+
+.sg-mobile-home-band {
+	position: absolute;
+	background: $body-background-color; 
+	border-bottom: 1px solid $primary-border-color;
+}
+
+
+
+
+//============================================
+// NAV STYLES
+// ===========================================
+
+//NAV @USER NAME
+.sg-user-name-nav {
+	@include font-size(15);
+	font-weight: bold;
+	text-decoration: none;
+	color: $text-user-name;
+}//HOVER
+.sg-user-name-hover-nav {
+		color: lighten($text-user-name,30%);
+}
+
+//NAV @LIST @SECTION SEPARATORS
+.sg-section-name-nav {
+	@include font-size(10);
+	text-transform:uppercase;
+	color: $text-section-color;
+}
+
+//NAV @LIST ELEMENTS
+.sg-list-box-nav{
+	color: $text-list-color; 
+}
+.sg-list-box-nav-hover{
+	background-color: $box-list-hover-color;
+	color: $text-list-hover-color; 
+	@include border-radius(2px,2px);
+}
+
+//NAV @ICONS
+.sg-icon-nav {
+	@include font-size(12);
+	color: inherit;
+}
+
+//NAV @NETWORK LINKS
+.sg-network-links-nav {
+	@include font-size(15);
+	font-weight:bold;
+	color : inherit;
+	text-decoration:none;
+}
+
+//NAV @NETWORK SUB LINKS
+.sg-network-sub-links-nav {
+	color: lighten($text-list-color,20%);
+	font-weight: normal;
+	background-color:none;
+}
+
+//============================================
+// DROPDOWN Styles
+// ===========================================
+
+//DROPDOWN @MINI @HEADER
+.sg-info-area-basic {
+	@include font-size(12);
+	line-height:1;
+	font-weight: regular;
+	color: $text-info-area;
+}
+.sg-info-area-link {
+	@extend .sg-info-area-basic;
+	font-weight:bold;
+	border:none;
+	color: lighten($text-list-color, 30%);
+	text-decoration:none;
+}//HOVER
+.sg-info-area-hover-link {
+	color: lighten($text-list-color,60%);
+	background-color:$header-background-color;
+}
+
+//@DROPDOWN BASIC CONTAINER
+.sg-dropdown-basic{
+	z-index: 99;
+	//display: none;
+	border: 1.5px solid $primary-border-color;
+	background: $header-background-color;
+	overflow:auto;
+	@include border-radius(4px, 4px);
+}
+
+//DROPDOWN @DIVIDER ADDON
+.sg-dropdown-bottom-divider {
+border-bottom:1px solid $primary-border-color;
+}
+
+//DROPDOWN ICON CHANGE (jquery.addClass)
+.sg-trigger-active-dropdown {
+	color: $primary-brand-color;
+}
+
+//DROPDOWN ANCHOR STYLE
+.sg-drop-basic-links {
+	@include font-size(15);
+	text-decoration: none;
+	color: $text-user-name;
+	font-weight: bold;
+}//HOVER 
+.sg-drop-basic-links-hover {
+	@include font-size(15);
+	text-decoration: none;
+	color: lighten($box-list-hover-color,100%);
+	background-color: $box-list-hover-color;
+}
+
+//MSG DROPDOWN CONTENT LINK
+.sg-anchor-box-dropdown{
+	border-top: 1px solid $primary-border-color;
+	border-bottom: 1px solid $primary-border-color;
+}
+.sg-anchor-box-dropdown-hover {
+	background: darken($header-background-color,20%);
+}
+
+//DROPDOWN MSG @SENDER NAME IN 
+.sg-msg-sender-name {
+	@include font-size(13);
+	color: $text-user-name;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+
+//DROPDOWN @MSG @CONTENT PREVIEW IN 
+.sg-msg-content-preview {
+	@include font-size(13);
+	color: $text-content-color;
+}
+//DROPDOWN @NOTES PREVIEW
+.sg-notes-preview {
+	@extend .sg-msg-content-preview;
+	white-space: normal;
+}
+//DROPDOWN @STRONG CONTENT 
+.sg-notes-strong-text {
+	//style later here
+}
+//DROPDOWN @USER CONTENT PREVIEW
+.sg-notes-user-content-preview {
+	@extend .sg-msg-content-preview;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+}
+//DROPDOWN @MSG @TIME 
+.sg-msg-time-basic {
+	@include font-size(11);
+	color :lighten($text-info-area, 5%);
+}
+//DROPDOWN @MINI @FOOTERS
+.sg-dropdown-mini-header {
+	background:$header-background-color;
+}
+.sg-dropdown-mini-header {
+	@extend .sg-dropdown-mini-header;
+	border: 1px solid $primary-border-color;
+	@include border-radius(4px, 2px);
+}
+.sg-dropdown-mini-footer{
+	@extend .sg-dropdown-mini-header;
+	border: 1px solid $primary-border-color;
+	@include border-radius(2px, 4px);
+}
+
+
+
+
+//============================================
+// @FORM ELEMENTS 
+// ===========================================
+
+
+// BASIC @INPUT styles
+// ===========================================
+
+.sg-basic-input {
+	@include border-radius(4px,4px);
+	border: 1px solid $primary-border-color;
+	padding: 5px;
+
+}
+
+
+.sg-title-basic-input {
+	@extend .sg-basic-input;
+
+}
+
+.sg-body-basic-textarea {
+	@extend .sg-basic-input;
+	
+}
+
+// SEARCH styles
+// ===========================================
+
+.sg-basic-search-input {
+	@extend .sg-basic-input;
+	height: 14px;
+
+}
+
+
+
+//============================================
+// @BUTTONS ELEMENTS 
+// ===========================================
+
+
+//BASIC @BUTTON STYLE
+.sg-basic-button {
+	//Make sure all reset button styles go here
+	background: $body-background-color;
+	border: 1px solid $primary-border-color;
+}//HOVER
+.sg-basic-button-hover {
+	background: $button-action-hover-color;
+}//ACTIVE
+.sg-basic-button-active {
+	background: darken($button-action-hover-color,30%);
+}
+
+//@INVISIBLE button 
+.sg-basic-invisible-button {
+	@extend .sg-basic-button;
+}//HOVER
+.sg-basic-invisible-button-hover {
+	@extend .sg-basic-button-hover;
+	border: none;
+}
+
+
+
+
+//=============
+// FORM BUTTONS 
+// ===========================================
+
+
+//basic FORM POSITIVE BUTTON STYLE
+.sg-form-positive-basic-button 	{
+	background: $body-background-color;
+	border: 1px solid $primary-border-color;
+
+}//HOVER 
+.sg-form-positive-basic-button-hover {
+	background: darken($body-background-color,20%);
+}//ACTIVE
+.sg-form-positive-basic-button-active {
+	background: darken($body-background-color,80%);
+
+}
+
+//basic FORM POSITIVE BUTTON STYLE
+.sg-form-negative-basic-button 	{
+	background: $body-background-color;
+	border: none;
+
+}//HOVER 
+.sg-form-negative-basic-button-hover {
+	background: darken($body-background-color,20%);
+
+
+}//ACTIVE
+.sg-form-negative-basic-button-active {
+	background: darken($body-background-color,80%);
+}
+
+
+//=============
+// EDIT BUTTONS 
+// ===========================================
+
+//TRRIGER EDITS
+.sg-edit-trigger-button{
+	background: $body-background-color;
+	border: 1px solid $primary-border-color;
+
+	&:hover { 
+		background: darken($body-background-color, 20%);
+	}
+	&:active {
+		background: darken($body-background-color, 50%);
+	}
+}
+
+
+//=============
+// OPTIONS BUTTONS 
+// ===========================================
+.sg-options-drop-button { 
+	@extend .sg-basic-button;
+
+	&:hover{
+		@extend .sg-basic-button-hover;
+
+	}
+	&:active{ 
+		@extend .sg-basic-button-active;
+	}
+
+}
+
+//============================================
+// @SHAPES AND CSS ICONS
+// ===========================================
+
+
+.sg-shapes-more-options-icon {
+	    border: 1px inset;
+	    border-color: $primary-border-color;
+	    background:$primary-border-color;
+	    margin: 2px auto 0 auto;
+	    width: 20px;
+	    height: 4px;
+}
+
+//============================================
+// @ITEM PREVIEWS
+// ===========================================
+
+
+//Medium CONTAINER
+// ===========================================
+
+.sg-item-container-small {
+	border: 1px solid $primary-border-color;
+	text-decoration :none;
+}
+
+.sg-item-title-small {
+	text-decoration: none;
+	color: grey; //needs to be way lighter
+}
+
+.sg-item-date-small {
+	text-decoration: none;
+	color: grey;
+}
+
+
+//RIOT FREAMEWORK
+@import "_essentials";
+@import "_formElements";
+@import "_dropdowns";
+@import "_hacks";
+
+

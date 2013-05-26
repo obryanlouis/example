@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Connections Edit Template</title>   
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        <p> Edit the connection below, then hit submit: </p>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p><input type="text" name="interest" value='{{established_interest}}' </p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+    </body>
+</html> 

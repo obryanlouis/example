@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Me/Awards Template</title>   
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                <p>{{ field.errors }}</p>
+                <p>{{ field.label_tag }}: {{ field }}</p>
+            {% endfor %}
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        <p>_________________________</p>
+        <p>All awards of logged-in user:</p>
+        {% for item in awards_list %}
+            <p>_________________________</p>
+            <p>{{ item.award_title }}</p>
+            <p>{{ item.link }}</p>
+            <p>{{ item.get_award_or_mention_display}}</p>
+            <tr>
+                <td><a href="{% url edit_award item_id=item.pk %}">Edit</a></td>
+                <td><a href="{% url delete_award item_id=item.pk %}">Delete</a></td>
+            </tr>
+        {% endfor %} 
+    </body>
+</html> 

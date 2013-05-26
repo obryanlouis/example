@@ -1,0 +1,527 @@
+/*--------------------------------------------------------------ALL-------------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue",Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+/*-------------------------------------------------------------@VARIABLES-----------------*/
+/*-------------------------------------------------------------@JQUERY CLASSES------------*/
+.highlightTog {
+  background-color: #878585;
+  border: 1px solid #c8c8c8;
+  -moz-box-shadow: inset 0px 0px 10px #c8c8c8;
+  -webkit-box-shadow: inset 0px 0px 10px #c8c8c8;
+  box-shadow: inset 0px 0px 10px #c8c8c8; }
+
+/*-------------------------------------------------------------@ERROR CLASSES------------*/
+section.err {
+  float: left;
+  width: 324px;
+  height: 25px;
+  margin: 3 0 -3 0;
+  background-color: #ffaaaa;
+  padding: 0 3 0 3;
+  -moz-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.35);
+  /*INVISBLEBOXHACK used to aling non error boxes with the movement of Errored boxes.
+  /*Takes up space but not visibility.*/
+  /* type and Sprite stylign for Error msgs and the X sprite */ }
+  section.err.overAll {
+    margin: 3 0 0 0;
+    padding: 7 0 0 6;
+    height: 35px; }
+  section.err.tall {
+    margin: 3 0 3 0;
+    padding: 7 6 10 6;
+    width: 318px;
+    height: 39px; }
+  section.err.midErr {
+    width: 187.11765px; }
+  section.err.smallErr {
+    width: 126.88235px;
+    margin-left: 1px; }
+  section.err.whiteErrStandIn {
+    float: left;
+    width: 184.11765px;
+    height: 25px;
+    margin: 3 0 -3 0;
+    background-color: white;
+    padding: 0 3 0 3;
+    -o-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  section.err ul li {
+    list-style: none;
+    margin: 5 0 0 5px;
+    padding: 0 0 0 15px;
+    background: url("../sprites/overbots_half.png") no-repeat -240px -5px;
+    color: #645151;
+    font-size: 9pt;
+    font-weight: bold; }
+
+/*-------------------------------------------------------------@WRAPPER------------*/
+body div#wrapper {
+  position: relative;
+  width: 330px;
+  margin: 20 auto 0 auto;
+  /*-------------------------------------------------------------@LOGO------------*/
+  /*-------------------------------------------------------------@toggle buts------------*/
+  /*----------------------------------------------------@WRITEINFORMS------------*/
+  /*-------------------------------------------------------------@LOGIN------------*/
+  /*-------------------------------------------------------------@REGISTER HOMEPAGE------------*/
+  /*-------------------------------------------------------------@REGISTERPLUS------------*/
+  /*------------------------------------------------------@UBUILD------------*/
+  /*---------------------------------------------------------@REGQUICKSTEPS------------*/
+  /*-------------------------------------------------------------@COMPINFO------------*/ }
+  body div#wrapper h1#riotryLogo {
+    position: relative;
+    color: #333333;
+    font-weight: bold;
+    font-size: 100pt;
+    margin: 0 0 0 -8;
+    letter-spacing: 2px; }
+  body div#wrapper hr#separationLine {
+    position: relative;
+    margin: 13 0 0 0;
+    border: 0;
+    height: 1px;
+    background: #aaaaaa; }
+  body div#wrapper section#sectiontoggle button {
+    float: left;
+    margin: 3 0 0 -1;
+    border: 1px solid #e8e8e8;
+    background-color: #f5f3f3;
+    height: 40px;
+    width: 165.82915px;
+    padding: 0 auto 0 auto;
+    font-weight: bold;
+    font-size: 12pt;
+    color: #505050; }
+    body div#wrapper section#sectiontoggle button:active, body div#wrapper section#sectiontoggle button a:focus {
+      background: url("../sprites/overbots_half.png") no-repeat -66px -50px; }
+  body div#wrapper section form.writeIn input {
+    float: left;
+    font-family: "HelveticaNeue-Light",helvetica;
+    font-weight: lighter;
+    margin: 3 0 0 0;
+    border: 1.5px solid #e6e6e6;
+    height: 55;
+    width: 330px;
+    padding: 10;
+    color: #505050;
+    font-size: 11pt; }
+  body div#wrapper section.loginSectog {
+    /*@LOGIN SECTION - hold all login related forms and style and some of the style for the PASSWORD RESET */
+    transition: display 2s;
+    -moz-transition: display 2s;
+    -webkit-transition: display 2s;
+    -o-transition: display 2s;
+    /*--------------------------------------------------------@RESET PASSWORD------------*/
+    /*Top tittle Container*/ }
+    body div#wrapper section.loginSectog form input {
+      /*Placeholder text style for the Login (only works on firefox, chrome and safari - no opera)*/
+      /* Resizes Password to allow for space on the login form */
+      /* login submit only in the login Section */
+      /* controls the email for the password reset email field */ }
+      body div#wrapper section.loginSectog form input:-moz-placeholder {
+        font-size: 10pt;
+        color: #bebebe; }
+      body div#wrapper section.loginSectog form input::-webkit-input-placeholder {
+        font-size: 10.5pt;
+        color: #bebebe; }
+      body div#wrapper section.loginSectog form input[type="password"] {
+        width: 275px; }
+      body div#wrapper section.loginSectog form input[type="submit"] {
+        background: url("../sprites/overbots_half.png") no-repeat -8px -6px;
+        border: none;
+        width: 55;
+        height: 55;
+        background-color: #66cccc;
+        color: white; }
+        body div#wrapper section.loginSectog form input[type="submit"]:active {
+          background: url("../sprites/overbots_half.png") no-repeat -8px -64px; }
+      body div#wrapper section.loginSectog form input#id_email {
+        width: 275px;
+        margin-bottom: 3px; }
+    body div#wrapper section.loginSectog a {
+      /* Link for the password reset form */
+      float: left;
+      margin: 5 0 0 0;
+      color: #d2d2c8;
+      font-size: 10pt;
+      text-decoration: none;
+      font-weight: bold; }
+      body div#wrapper section.loginSectog a:hover, body div#wrapper section.loginSectog a:active {
+        color: #646464;
+        font-weight: bold;
+        text-decoration: underline; }
+    body div#wrapper section.loginSectog ul#pass_res {
+      background-color: rgba(35, 165, 222, 0.75);
+      padding: 5;
+      margin: 5 0 3 0;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+      -o-border-radius: 2px;
+      border-radius: 2px; }
+      body div#wrapper section.loginSectog ul#pass_res h1 {
+        /* password reset */
+        color: white;
+        margin: 0; }
+    body div#wrapper section.loginSectog p {
+      float: left;
+      margin: 5 0 0 0;
+      color: #787878;
+      font-size: 12pt;
+      font-weight: lighter; }
+      body div#wrapper section.loginSectog p#smaller {
+        margin: 3 0 0 0;
+        font-size: 10pt;
+        color: #a0a0a0;
+        font-weight: lighter; }
+    body div#wrapper section.loginSectog div#double_wrapper {
+      position: relative;
+      margin: 0 0 0 0; }
+      body div#wrapper section.loginSectog div#double_wrapper span#plcehld {
+        /*/////// OUT TILL FF POSITION GETS FIXED///////because, ff and opera's different treatment of absolutes seems to have no current solution (even when browser is reset on the top)*/
+        position: absolute;
+        top: 22px;
+        left: 10px;
+        font-size: 12pt;
+        font-weight: lighter;
+        color: #bebebe; }
+  body div#wrapper section#registerSec {
+    /* register section on the homepage */
+    display: none;
+    /* Link style for the terms ans condition section */ }
+    body div#wrapper section#registerSec span {
+      position: relative;
+      top: 4;
+      color: #d2d2c8;
+      font-size: 10pt;
+      text-decoration: none;
+      font-weight: lighter; }
+    body div#wrapper section#registerSec input[type=submit] {
+      /* submit button style and sprites */
+      background: url("../sprites/overbots_half.png") no-repeat -7px -123px;
+      background-color: #ffcc66;
+      color: white; }
+      body div#wrapper section#registerSec input[type=submit]:active {
+        background: url("../sprites/overbots_half.png") no-repeat -7px -185px; }
+    body div#wrapper section#registerSec a {
+      color: #d2d2c8;
+      font-size: 10pt;
+      text-decoration: none;
+      font-weight: bold; }
+      body div#wrapper section#registerSec a:hover, body div#wrapper section#registerSec a:active {
+        color: #646464;
+        font-weight: bold;
+        text-decoration: underline; }
+  body div#wrapper section#registerplus {
+    position: relative;
+    height: 350px;
+    margin: -13 0 0 0;
+    /*----------------------------@WRAPPERS--------------------------------*/
+    /* all the select forms use the Chosen plugin to fucntion in a proper chrossbrowser manner, half of the style is in the css the other half int eh plugin.js script */ }
+    body div#wrapper section#registerplus span {
+      /* a bit of a hack to get the Chosen placeholder in the same colors for Chosen Style check the Plugins.scss file*/
+      color: #c8c8c8;
+      font-weight: lighter; }
+    body div#wrapper section#registerplus div {
+      /* WRAPPS THE REGISTERPLUS FORMS TO THE LEFT SIDE OF THE SCREEN */
+      /*includes the FIRST NAME,  LAST NAME, and CITY NAME. */
+      /* WRAPPS THE REGISTERPLUS FORMS TO THE RIGHT SIDE OF THE SCREEN */
+      /*includes the MIDDLE NAME, GENDER SELECT and STATE NAME.    */ }
+      body div#wrapper section#registerplus div#left_form_wrapper {
+        float: left;
+        margin-top: 15;
+        width: 194.11765px;
+        overflow: hidden; }
+      body div#wrapper section#registerplus div#right_form_wrapper {
+        float: right;
+        margin-top: 15;
+        width: 135.2459px; }
+    body div#wrapper section#registerplus input {
+      /*Placeholder text style for the registerPlus forms (does not work on opera or IE...then agian what works in IE?)*/
+      /* CONTROLS THE INDIVIDUAL FORMS INSIDE THE WRAPPERS OF THE REGISTERPLUS FORMS */ }
+      body div#wrapper section#registerplus input:-moz-placeholder {
+        font-size: 10pt;
+        color: #bebebe; }
+      body div#wrapper section#registerplus input::-webkit-input-placeholder {
+        font-size: 10.5pt;
+        color: #bebebe; }
+      body div#wrapper section#registerplus input[placeholder="first"] {
+        width: 192.98246px; }
+      body div#wrapper section#registerplus input[placeholder="middle (optional)"] {
+        width: 132.88235px;
+        margin-left: 1; }
+      body div#wrapper section#registerplus input[placeholder="last"] {
+        width: 192.98246px; }
+      body div#wrapper section#registerplus input[placeholder="city"] {
+        width: 192.98246px; }
+      body div#wrapper section#registerplus input[placeholder="state"] {
+        width: 134.56015px;
+        margin-left: 1; }
+      body div#wrapper section#registerplus input[placeholder="country"] {
+        width: 132.22222px;
+        margin: 3 0 0 3; }
+      body div#wrapper section#registerplus input[type=submit] {
+        background: url("../sprites/overbots_half.png") no-repeat -7px -123px;
+        background-color: #ffcc66;
+        color: white; }
+        body div#wrapper section#registerplus input[type=submit]:active {
+          background: url("../sprites/overbots_half.png") no-repeat -7px -185px; }
+    body div#wrapper section#registerplus p {
+      float: left;
+      display: none;
+      margin: 3 0 -3 0;
+      width: 180.32787px;
+      height: 13px;
+      background-color: #8c8c8c;
+      border: 1px solid #e6e6e6;
+      border-bottom: 0;
+      color: white;
+      font-size: 9pt;
+      font-weight: normal;
+      padding: 3 6 5 6; }
+      body div#wrapper section#registerplus p#onSmallerBlock {
+        width: 122.22222px; }
+      body div#wrapper section#registerplus p.descDOB {
+        width: 316px; }
+    body div#wrapper section#registerplus div#gend {
+      float: left;
+      margin: 3 0 0 1;
+      width: 100px; }
+      body div#wrapper section#registerplus div#gend select {
+        width: 132.88235px; }
+    body div#wrapper section#registerplus div#date {
+      float: left;
+      width: 330px;
+      margin: 3 0 0 0; }
+      body div#wrapper section#registerplus div#date select {
+        float: left;
+        width: 107.49px; }
+    body div#wrapper section#registerplus div#cntry {
+      float: left;
+      width: 330px;
+      margin: 3 0 0 0; }
+      body div#wrapper section#registerplus div#cntry select {
+        float: left;
+        width: 330px; }
+    body div#wrapper section#registerplus a#whyLink {
+      display: none;
+      float: right;
+      color: #c8c8c8;
+      font-size: 10pt;
+      text-decoration: none;
+      font-weight: normal; }
+      body div#wrapper section#registerplus a#whyLink:hover {
+        color: #646464;
+        font-weight: normal; }
+    body div#wrapper section#registerplus form select {
+      float: left;
+      margin: 3 0 0 0;
+      border: 1.5px solid #e6e6e6;
+      background-color: transparent;
+      height: 55;
+      width: 330px;
+      border-radius: 1;
+      padding: 10;
+      color: #bebebe;
+      font-size: 11pt;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none; }
+      body div#wrapper section#registerplus form select .chzn-slct-gender {
+        margin-left: 3;
+        position: absolute;
+        width: 132.88235px; }
+      body div#wrapper section#registerplus form select#month {
+        width: 107.28571px;
+        padding-left: 26; }
+      body div#wrapper section#registerplus form select#day {
+        width: 58.92857px;
+        margin-left: 3;
+        padding-left: 15; }
+      body div#wrapper section#registerplus form select#year {
+        width: 70.75px;
+        margin-left: 3;
+        padding-left: 17; }
+  body div#wrapper section#buildU h5 {
+    font-size: 14pt;
+    font-weight: lighter;
+    color: #505050;
+    text-align: right;
+    margin: 3 0 0 0; }
+  body div#wrapper section#buildU ul {
+    margin: -2 0 0 0; }
+    body div#wrapper section#buildU ul div.netRect, body div#wrapper section#buildU ul div.catRect, body div#wrapper section#buildU ul div.meRect, body div#wrapper section#buildU ul div.brandRect {
+      position: absolute;
+      left: 5;
+      margin-top: -8;
+      height: 50px;
+      width: 5; }
+    body div#wrapper section#buildU ul .netRect {
+      background-color: #f5f500; }
+    body div#wrapper section#buildU ul .catRect {
+      background-color: #23a5de; }
+    body div#wrapper section#buildU ul .meRect {
+      background-color: #54b848; }
+    body div#wrapper section#buildU ul .brandRect {
+      background-color: #f68d27; }
+    body div#wrapper section#buildU ul a {
+      text-decoration: none; }
+    body div#wrapper section#buildU ul li {
+      list-style: none;
+      margin: 10 0 0 -33px;
+      padding: 7 0 0 35px;
+      color: #cccccc;
+      font-size: 18pt;
+      font-weight: lighter;
+      height: 41px;
+      border: solid 1px white;
+      transition: font-size .1s, color .5s, box-shadow .5s;
+      -moz-transition: font-size .1s, color .5s, box-shadow .5s;
+      -webkit-transition: font-size .1s, color .5s, box-shadow .5s;
+      -o-transition: font-size .1s, color .5s, box-shadow .5s; }
+      body div#wrapper section#buildU ul li:hover {
+        font-size: 20pt;
+        color: #646464;
+        -o-box-shadow: -1px 2px 6px 1px #e6e6e6;
+        -moz-box-shadow: -1px 2px 6px 1px #e6e6e6;
+        -webkit-box-shadow: -1px 2px 6px 1px #e6e6e6;
+        box-shadow: -1px 2px 6px 2px #e6e6e6;
+        background-color: #fafafa;
+        right: 0; }
+  body div#wrapper section.regSteps ul#sent_con_email {
+    float: left;
+    width: 324px;
+    height: 55px;
+    margin: 8 0 0 0;
+    background-color: #66cc33;
+    padding: 8 3 2 3;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25); }
+    body div#wrapper section.regSteps ul#sent_con_email li {
+      position: relative;
+      list-style: none;
+      margin: 10px 0px 0 15px;
+      padding: 0 0 0 50px;
+      background: url("../sprites/overbots_half.png") no-repeat -8px -246px;
+      color: white;
+      font-size: 10pt;
+      font-weight: bold;
+      line-height: 35px; }
+  body div#wrapper section.regSteps div#inbox_sprite {
+    float: left;
+    width: 300px;
+    height: 160px;
+    margin: 30 0 0 85;
+    background: url("../sprites/overbots_half.png") no-repeat -176px -344px; }
+  body div#wrapper section.regSteps span {
+    float: left;
+    margin: 0 50 190 70;
+    font-size: 12pt;
+    color: #c8c8c8;
+    font-weight: bold; }
+  body div#wrapper section.regSteps ul#activation_exp {
+    float: left;
+    width: 280px;
+    margin: 0 0 0 0;
+    background-color: #ff9933;
+    padding: 0 25 20 25;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25); }
+    body div#wrapper section.regSteps ul#activation_exp li {
+      position: relative;
+      list-style: none;
+      margin: 10px 0 0 -12px;
+      padding: 0 0 0 45px;
+      background: url("../sprites/overbots_half.png") no-repeat 0px -293px;
+      color: white;
+      font-size: 15pt;
+      font-weight: bold;
+      line-height: 50px; }
+    body div#wrapper section.regSteps ul#activation_exp hr {
+      position: relative;
+      margin: 0 0 8 0;
+      border: 0;
+      height: 1px;
+      background: #646464; }
+    body div#wrapper section.regSteps ul#activation_exp strong {
+      color: #c8c8c8;
+      font-weight: bold; }
+    body div#wrapper section.regSteps ul#activation_exp em {
+      position: relative;
+      display: block;
+      color: white;
+      width: 250px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 10pt; }
+  body div#wrapper section.regSteps ul#dolnks {
+    float: left;
+    width: 311px;
+    height: 40px;
+    background-color: whitesmoke;
+    margin: 0 0 0 0;
+    padding: 0 3 10 15;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -moz-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25); }
+    body div#wrapper section.regSteps ul#dolnks:hover {
+      background-color: white; }
+    body div#wrapper section.regSteps ul#dolnks:active {
+      background-color: #c8c8c8;
+      -moz-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+      box-shadow: inset 0px 0px 10px 1px rgba(0, 0, 0, 0.25); }
+    body div#wrapper section.regSteps ul#dolnks a {
+      text-decoration: none; }
+    body div#wrapper section.regSteps ul#dolnks li {
+      position: relative;
+      list-style: none;
+      padding: 2 0 0 45px;
+      background: url("../sprites/overbots_half.png") no-repeat;
+      color: #646464;
+      font-size: 10pt;
+      font-weight: bold;
+      line-height: 50px; }
+      body div#wrapper section.regSteps ul#dolnks li#resend_act {
+        background-position: -240px -63px; }
+      body div#wrapper section.regSteps ul#dolnks li#re_register {
+        background-position: -239px -20px; }
+  body div#wrapper section#companyDetails {
+    position: relative;
+    margin-top: 400px;
+    width: 330px; }
+    body div#wrapper section#companyDetails a {
+      float: center;
+      margin: 0;
+      top: 300;
+      color: gainsboro;
+      font-size: 10pt;
+      text-decoration: none;
+      font-weight: lighter; }
+      body div#wrapper section#companyDetails a:hover {
+        color: #646464;
+        font-weight: normal; }
+    body div#wrapper section#companyDetails span {
+      font-size: 12px;
+      color: gainsboro;
+      margin: 0 auto 0 auto; }

@@ -1,0 +1,374 @@
+@import "_tools";
+//
+// Riotry Dropdowns
+// Elements that make up a dropdown
+// Copyright 2013 by Paul Andre Rada
+// Designed to the added as @extends into the corresponding tags.
+
+//============================================
+// BASIC DROPDOWN
+// ===========================================
+//	All elements with a dd- need to be nested 
+//	inside the basic
+//	Ellements written at less then one space 
+//	in betwen are meant to be nested, but they also
+//	work seperatly (minus positioning quirks)
+
+//basic dropdown @CONTAINER
+.dd-basic-container {
+	position: relative;
+	width: auto;
+	height: auto;
+	margin:30px 0px 0px 0;
+	z-index: 99;
+}
+//basic dropdown @BOX
+.dd-basic-box  {
+	@extend .sg-dropdown-basic;
+	position: absolute;
+	top: -23px;
+	width: 199px;
+	height: 205px;
+	margin: 0;
+	display:none;
+}
+//basic dropdown @LIST ELEMENT
+.dd-basic-list-element {
+	margin: 13px 0;
+	width:100%;
+}
+//basic dropdown @ANCHOR ELEMENT
+.dd-basic-anchor-element{
+	@extend .sg-drop-basic-links;
+	float: left;
+	padding: 10px 25px;
+	width:100%;
+	text-align:left;
+}//HOVER 
+.dd-basic-anchor-element-hover {
+	@extend .sg-drop-basic-links-hover;
+}
+//basic dropdown @DIVIDER ADD ON
+.dd-dropdown-bottom-divider {
+	@extend .sg-dropdown-bottom-divider;
+}
+
+
+//basic dropdown @MINI HEADER 
+.dd-mini-header {
+	@extend .sg-dropdown-mini-header;
+	position: absolute;
+	margin: -27px 0 0 -1px;
+	width: 350px;
+	height:28px;
+}//mini header @DESCRIPTION TEXT
+.dd-mini-header-section-description { 
+	@extend .sg-info-area-basic;
+	float: left;
+	margin:5px 10px;	
+}//mini header @SECTION LINK
+.dd-mini-header-section-link{
+	@extend .sg-drop-basic-links;
+	@extend .sg-info-area-link;
+	float:right;
+	width: auto;
+	height: 0px;
+	margin:5px 10px;
+	padding: 0;
+} //HOVER
+.dd-mini-header-section-link {
+	@extend .sg-info-area-hover-link;					
+}
+			
+
+//basic dropdown @MINI FOOTER 
+.dd-mini-footer {
+	@extend .sg-dropdown-mini-footer;
+	position: absolute;
+	margin: 296px 0 0 -1px;
+	padding-top: 5px;
+	width: 350px;
+	height: 30px;
+}//mini footer @SECTION LINK
+.dd-mini-footer-section-link {
+	@extend .sg-info-area-link;
+	float: center;
+	margin: 0 0 0 135px;
+	@include font-size(16);
+}//HOVER
+.dd-mini-footer-section-link-hover {
+	@extend .sg-info-area-hover-link;
+}
+
+
+//============================================
+// MSG AND NOTES DROPDOWN 
+// ===========================================
+
+//Wrapp in BASIC CONTAINER
+
+//msg and notes dropdown @BOX
+.dd-msg-notes-basic-box  {
+	@extend .sg-dropdown-basic;
+	top: 40px;
+	width: 350px;
+	height: 300px;
+	top: 55px;
+	display:none;
+
+
+
+}
+//msg and notes @HORI CONTENT @CONTAINER
+.dd-hori-box-container {
+	float:left;
+	width:100%;
+	margin:3px 0 0 0;
+}
+
+//============================================
+// MSG DROPDOWN ELEMENTS
+// ===========================================
+
+//Dropdown containers Shared with shared on top 
+
+//@MSG @HORI CONTENT BOX
+.dd-hori-msg-content-box-link { 
+	@extend .sg-anchor-box-dropdown;
+	float: left;
+	width: 100%;
+	height: 60px;
+	padding: 3px 13px;
+}//HOVER
+.dd-hori-msg-content-box-link-hover {
+	@extend .sg-anchor-box-sdropdown-hover;
+}
+//msg @MSGER NAME
+.dd-msger-name {
+	@extend .sg-msg-sender-name;
+	@include columns(5);
+	padding-left: 6px;
+}
+//msg CONTENT PREVIEW
+.dd-msg-content-preview {
+	@extend .sg-msg-content-preview;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
+
+	float: left;
+	width: 78%;
+	padding: 7px 0 0 11px;
+}
+//msg @USER RUN ON CONTENT
+.dd-notes-user-content { 
+	@extend .dd-msg-content-preview;
+}
+//msg @EVENT DATE
+.dd-msg-event-date-stamp {
+	@extend .sg-msg-time-basic;
+	float: left;
+	height: 10px;
+	padding: 0;
+	margin: 0 0 0 11px;
+	line-height: 2;
+}
+
+//============================================
+// NOTES DROPDOWN ELEMENTS
+// ===========================================
+
+//Dropdown containers Shared shared on top of msgs
+
+//@NOTES @HORI CONTENT BOX
+.dd-hori-notes-content-box-link { 
+	@extend .sg-anchor-box-dropdown;
+	float: left;
+	width: 100%;
+	height: 75px;
+	padding: 3px 13px;
+}//HOVER
+.dd-hori-notes-content-box-link-hover {
+	@extend .sg-anchor-box-dropdown-hover;
+}
+//notes CONTENT PREVIEW 
+.dd-notes-content{// style in a more readable manner.
+	@extend .dd-msg-content-preview;
+	padding: 0 0 0 11px;
+	white-space: normal;
+}
+//notes @STRONG CONTENT
+.dd-notes-strong-text{
+	@extend .sg-notes-strong-text;
+}
+//notes @USER CONTENT PREVIEW
+.dd-notes-user-content-preview {
+	@extend .sg-notes-user-content-preview;
+	padding-top: 5px;
+}
+//note @EVENT DATE
+.dd-notes-event-date-stamp {
+	@extend .sg-msg-time-basic;
+	@extend .dd-msg-event-date-stamp;
+	line-height: 1.7;
+	margin: 0 0 0 62px;
+	clear:both;
+}	
+
+//============================================
+// NAV LIST DROPDOWN 
+// ===========================================
+
+//nav list dropdown @LIST CONTAINER
+.dd-nav-list-container { 
+	display:none;
+	margin-top: 0px;
+}
+//nav list dropdown @LIST ELEMENT
+.dd-nav-list-element {
+	padding-left: 30px;
+}//HOVER
+.dd-nav-list-element-hover {
+	background-color:$body-background-color;
+}		
+//nav list dropdown @LIST LINK
+.dd-nav-list-link {
+	@extend .sg-network-sub-links-nav;
+}//HOVER
+.dd-nav-lsit-link-hover {
+
+}
+
+
+//============================================
+// @MODAL VARIABLES
+// ===========================================
+
+	$reveal-modal-padding: 40px;
+	$reveal-modal-small: 	$base-width/3 + $reveal-modal-padding;
+	$reveal-modal-medium: 	$base-width/2 + $reveal-modal-padding;
+	$reveal-modal-large:    ($base-width * 90) / 100 + $reveal-modal-padding;
+
+	//Mobile mode 
+	$reveal-modal-mobile : ($mobile-portrait-width + 20);
+	$reveal-modal-left-pos : -10px;
+
+	//tablet mode 
+	$reveal-modal-tablet-large : $base-width/2 + $reveal-modal-padding;
+	$reveal-modal-tablet-margin-large: $reveal-modal-tablet-large / -2 ;
+
+	//Minus margin-left (for centering)
+	$reveal-modal-margin-left-small : $reveal-modal-small/-2;
+	$reveal-modal-margin-left-medium : $reveal-modal-medium/-2;
+	$reveal-modal-margin-left-large : $reveal-modal-large/-2;
+
+
+
+
+//============================================
+// REVEAL(plugin) MODAL ELEMENTS
+// ===========================================
+
+.dd-reveal-modal {
+	visibility: hidden;
+	top: 100px; 
+	left: 50%;
+	background: $body-background-color; 
+	position: absolute;
+	z-index: 101;
+	padding: 30px 40px 34px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.4);
+	-box-shadow: 0 0 10px rgba(0,0,0,.4);
+
+	//medium is default
+	width : $reveal-modal-medium;
+	margin-left: $reveal-modal-margin-left-medium;
+
+
+		@media only screen and (max-width: 480px) {
+	            width: $reveal-modal-mobile; 
+	            margin-left: 0;
+	            left:$reveal-modal-left-pos;
+	            padding:10px;
+	    }
+	}
+
+//==================================SIZES
+
+.dd-reveal-modal-small 		{
+	width : $reveal-modal-small;
+	margin-left: $reveal-modal-margin-left-small;
+		
+		@media only screen and (max-width: 480px) {
+	            width: $reveal-modal-mobile; 
+	            margin-left: 0;
+	            left:$reveal-modal-left-pos;
+	            padding:10px;
+	    }
+}
+
+.dd-reveal-modal-medium 		{ 
+	width : $reveal-modal-medium;
+	margin-left: $reveal-modal-margin-left-medium;
+		
+		@media only screen and (max-width: 480px) {
+	            width: $reveal-modal-mobile; 
+	            margin-left: 0;
+	            left:$reveal-modal-left-pos;
+	            padding:10px;
+	    }		
+}
+
+.dd-reveal-modal-large 		{
+	width: $reveal-modal-large;
+	margin-left: $reveal-modal-margin-left-large;
+
+	@media only screen and (min-width: 480px) and (max-width: $desktop-size-min)  {
+			width: $reveal-modal-tablet-large;
+			margin-left: $reveal-modal-tablet-margin-large;
+		}
+		
+		@media only screen and (max-width: 480px) {
+	            width: $reveal-modal-mobile; 
+	            margin-left: 0;
+	            left:$reveal-modal-left-pos;
+	            padding:10px;
+	    }
+ }
+
+//==================================CLOSE X
+.close-reveal-modal {
+	font-size: 22px;
+	line-height: .5;
+	position: absolute;
+	top: 8px;
+	right: 11px;
+	color: #aaa;
+	text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+	font-weight: bold;
+	cursor: pointer;
+	} 
+
+//Close button entity is &#215;
+//============================================
+// MODAL BACKGROUND
+// ===========================================
+//Activated by JS no need to extend it
+.reveal-modal-bg { 
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	background: #000;
+	background: rgba(0,0,0,.8);
+	z-index: 100;
+	display: none;
+	top: 0;
+	left: 0; 
+	}
+
+
+

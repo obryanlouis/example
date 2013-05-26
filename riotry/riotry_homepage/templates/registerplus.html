@@ -1,0 +1,152 @@
+
+{% extends "base.html" %}
+
+{% block title %}riotry | Registration{% endblock %}
+
+		{% block form_area %}
+
+{# @ERRORS ALL FORM #}
+					{% if register_plus_form.first_name.errors and register_plus_form.last_name.errors and register_plus_form.gender.errors and register_plus_form.b_month.errors and register_plus_form.b_day.errors and register_plus_form.b_year.errors and register_plus_form.city.errors and register_plus_form.country.errors %}
+						<section class="err overAll">
+							<ul>
+								<li>Please fill out the form</li>
+							</ul>
+						</section>
+{# @HIDE OTHER ERRORS #}
+							<script type="text/javascript">
+								$(function () {
+									$('.err:not(.overAll)').hide();
+								});
+							</script>
+					{% elif register_plus_form.non_field_errors %}
+						<section class="err overAll">	
+							{{register_plus_form.non_field_errors}}
+						</section>
+					{% endif %}
+
+{# @SECTION TOP #}
+			<section id="registerplus">
+				<form method="post" class="writeIn">{% csrf_token %}
+
+{# @INVISIBLE MARGIN #}
+					<div id="invisibleMargin"></div>
+					<div id="left_form_wrapper">
+
+{# @ERRORS FIRST NAME #}
+						{% if register_plus_form.first_name.errors %}
+							<section class="err midErr">
+								{{ register_plus_form.first_name.errors }}
+							</section>
+						{% elif register_plus_form.middle_name.errors %}
+							<section class="err whiteErrStandIn">
+							</section>
+						{% endif %}
+{# @FIRST NAME FORM #}	
+						{{ register_plus_form.first_name }}        
+
+
+{# @ERRORS LAST NAME #}
+						{% if register_plus_form.last_name.errors %}
+							<section class="err midErr">
+								{{ register_plus_form.last_name.errors }}
+							</section>
+						{% elif register_plus_form.gender.errors %}
+								<section class="err whiteErrStandIn">
+								</section>
+						{% endif %}
+{# @LAST NAME FORM #}
+						{{ register_plus_form.last_name }} 		   
+					
+{# @POP UP DESCRIPTION #}
+						<p class="descLocation">please enter current address</p>
+
+{# @ERRORS CITY NAME #}
+						{% if register_plus_form.city.errors %}
+							<section class="err midErr">
+								{{ register_plus_form.city.errors }}
+							</section>
+						{% elif register_plus_form.state.errors %}
+								<section class="err whiteErrStandIn">
+								</section>
+						{% endif %}
+{# @CITY NAME FORM #}
+						{{ register_plus_form.city }} 			
+					</div>
+
+
+
+					<div id="right_form_wrapper">
+
+{# @ERRORS MIDLE NAME #}
+						{% if register_plus_form.middle_name.errors %}
+							<section class="err smallErr">
+								{{ register_plus_form.middle_name.errors }}
+							</section>
+						{% endif %}
+{# @MIDLE NAME #}
+						{{ register_plus_form.middle_name }} 
+
+{# @ERRORS GENDER SELECT#}
+						{% if register_plus_form.gender.errors %}
+							<section class="err smallErr">
+								{{ register_plus_form.gender.errors }}
+							</section>
+						{% endif %}      
+{# @GENDER SELECT #}
+						<div id="gend">
+								{{ register_plus_form.gender }}    
+						</div>
+
+{# @POP UP DESCRIPTION #}
+						<p class="descLocation" id="onSmallerBlock"></p>
+
+{# @ERRORS STATE NAME #}
+						{% if register_plus_form.state.errors %}
+							<section class="err smallErr">
+								{{ register_plus_form.state.errors }}
+							</section>
+						{% endif %} 
+{# @STATE NAME #}
+						{{ register_plus_form.state }}				
+
+					</div>
+
+{# ERRORS COUNTRY SELECT #}
+						{% if register_plus_form.country.errors %}
+						<section class="err">
+							{{ register_plus_form.country.errors }}
+						</section>
+						{% endif %} 
+{# STATE NAME #}
+						<div id="cntry">
+						{{ register_plus_form.country }}          
+						</div>
+
+{# @POP UP DESCRIPTION #}
+					<p class="descDOB">please enter date of birth</p>
+
+{# @ERRORS DOBIRTH SELECT #}
+					{% if register_plus_form.b_month.errors or register_plus_form.b_day.errors or register_plus_form.b_year.errors %}
+						<section class="err">
+							<ul>
+								<li>Please enter your full date of birth</li>
+							</ul>
+						</section>
+					{% endif %}	
+
+{# @DATE OF BIRTH SELECTS #}
+					<div id="date">
+						{{ register_plus_form.b_month }}
+						{{ register_plus_form.b_day }}
+						{{ register_plus_form.b_year }}
+					</div>
+
+{# @WHY DOB LINK #}
+					<a id="whyLink" href="index.html">why birthday?</a>
+{# @SUBMIT #}
+					<input type="submit" name="reg_plus_sub" value="submit">
+				</form>
+		 	</section>
+		{% endblock %}
+		  
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Me/Websites Template</title>   
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute! -->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in form %}
+                <p>{{ field.errors }}</p>
+                <p>{{ field.label_tag }}: {{ field }}</p>
+            {% endfor %}
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        <p>_________________________</p>
+        <p>All websites of logged-in user:</p>
+        {% for item in websites_list %}
+            <p>_________________________</p>
+            <p>{{ item.site_name }}</p>
+            <p>{{ item.site_link }}</p>
+            <p>{{ item.description }}</p>
+            <tr>
+                <td><a href="{% url edit_website item_id=item.pk %}">Edit</a></td>
+                <td><a href="{% url delete_website item_id=item.pk %}">Delete</a></td>
+            </tr>
+        {% endfor %} 
+    </body>
+</html> 

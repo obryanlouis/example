@@ -1,0 +1,70 @@
+@import "_skeleton";
+@import "_styleGuide";
+//@FEATURE WRAPP
+//============================================
+aside.feature_wrapp {
+	@include columns(19);
+	@include clearfix;
+	padding: 0;
+	//background: grey;
+}
+
+
+div.doigns_row {
+		@include row;
+		padding:0px;
+
+
+	div.doings_item_container {
+
+		@extend .es-doings-item-main-container;
+		height: auto;
+		
+		div.item_box_frame { 
+			@extend .es-cropped-item-main-container-small;
+			
+			div.image_container {
+				@extend .es-cropped-item-image-container-small;
+				
+
+				img {
+					@extend .es-cropped-item-image-small;
+				}
+			}
+
+			div.info_container {
+				@extend .es-cropped-item-title-meta-container;
+
+				h6 {
+					@extend .es-cropped-item-title; 
+					
+				}
+				button {
+					@extend .es-cropped-item-option-button;
+				}
+			}
+		}
+
+		div.doings_item_forms {
+			@extend .es-doings-item-forms;
+
+			input {
+				@extend .es-doings-item-forms-input;
+				margin: 0 0 10px 0;
+			}
+
+			textarea { 
+				@extend .es-doings-item-forms-textarea;
+				height: 201px;
+				
+			}
+		}
+
+		div.doings_item_buttons{
+			@include columns(1);
+			button {
+				@extend .es-doings-item-buttons;
+			}
+		}
+	}
+}

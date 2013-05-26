@@ -1,0 +1,43 @@
+	
+{% extends "base.html" %}
+
+{% block form_area %}
+<!--_______________________________________________________________________________________@SECTION TOGGLES-->
+			<section id="sectionToggle">
+				<button id="tog1">login</button>
+				<button id="tog2">register</button>
+			</section>
+<!--_______________________________________________________________________________________@LOGIN-->
+			<section id="loginSecTog">
+				<form method="post" class="writeIn">{% csrf_token %}
+						{{ login_form.email }}
+						{{ login_form.password }}
+						<input type="submit" value="login">
+				</form>
+						<a href="/accounts/password/reset/"> forgot password?</a>
+			</section>
+<!--_______________________________________________________________________________________@REGISTRATION-->
+			<section id="registerSec">
+				<form method="post" class="writeIn">{% csrf_token %}
+						{{ register_form.username }}
+						{{ register_form.email }}
+						{{ register_form.password }}
+						{{ register_form.password }}
+						<input type="submit" value="submit">
+				</form>
+				<form>
+				<input type="checkbox" checked="checked" value="terms"> 
+				<span>terms and conditions</span>
+				<form>	
+		 	</section>	  
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

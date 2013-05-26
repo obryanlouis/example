@@ -1,0 +1,36 @@
+		 	
+{% extends "base.html" %}
+{% block title %}riotry | Forgot to activate?{% endblock %}
+
+	{% block form_area %}
+		<section class="regSteps">
+
+		 	<ul id="activation_exp">
+		 		<li>Oops!</li>
+		 		<hr></hr>
+		 		<em>
+<<<<<<< HEAD
+		 			You haven't clicked the activation link we sent you. To resend the link to {{email}}, click the following link.
+=======
+		 		 	You never activated your account with the email we sent you. To have a new activation link resent to <strong>{{ email }},</strong>, click the following link.
+>>>>>>> 44f1f657c75932195b4a19b1f2532eecfc951b20
+		 		</em> 
+		 	</ul>
+
+
+		 	<a href="/registration/resend_activation_email/">
+		 		<ul id="dolnks">
+		 			<li id="resend_act">Resend activation link</li>
+		 		</ul>
+		 	</a>
+
+		 	<a href="/r/">
+		 		<ul id="dolnks">
+		 			<li id="re_register">Alternatively, you can register under a new username and email</li>
+		 		</ul>
+		 	</a>
+
+		</section>
+
+
+{% endblock %}

@@ -1,0 +1,148 @@
+ 
+	
+{% extends "base.html" %}
+
+{% block title %}riotry{% endblock %}
+
+{% block form_area %}
+
+
+{# @SECTION TOGGLES #}
+			<section id="sectionToggle">
+				<button id="tog1">login</button>
+				<button id="tog2">register</button>
+			</section>
+
+{# errors List #}
+	{% if register_form.errors or toggle %}
+		<script type="text/javascript" >
+			$(function () {
+				$('#tog2').addClass("highlightTog");
+				$('#tog1').removeClass("highlightTog");		
+				$('.loginSecTog').hide('600');
+				$('#registerSec').show('fast');
+			});
+		</script>
+		{% endif %}
+
+{# @LOGIN #}
+			<section class="loginSecTog">
+				<form method="post" class="writeIn">{% csrf_token %}
+					{% if l_fill_form_error %}
+						<section class="err overAll">
+							<ul>
+								<li>{{ l_fill_form_error }}</li>
+							</ul>
+						</section>
+					<script type="text/javascript">
+						$(function () {
+							$('.err:not(.overAll)').hide();
+						});
+					</script>
+						{% elif login_form.non_field_errors %}
+							<section class="err overAll">
+								<ul>
+									<li>{{login_form.non_field_errors}}</li>
+								</ul>
+							</section>
+						{% elif u_and_p_error %}
+							<section class="err overAll">
+								<ul>
+									<li>{{ u_and_p_error }}</li>
+								</ul>
+							</section>
+					{% endif %}
+
+					{% if login_form.username.errors %}
+					<section class="err">
+						{{login_form.username.errors }}
+					</section>
+					{% endif %}
+					{{ login_form.username }}
+
+					{% if login_form.password.errors %}
+					<section class="err">
+						{{login_form.password.errors }}
+		
+					</section>
+					{% endif %}
+					{{ login_form.password }}
+
+						<input type="submit" name="log_sub" value="login">
+				</form>
+						<a href="/password/reset/">forgot password?</a>
+			</section>
+
+{# @REGISTRATION #}
+			<section id="registerSec">
+				<form method="post" class="writeIn">{% csrf_token %}
+				{% if r_fill_form_error %}
+					<section class="err overAll">
+						<ul>
+							<li>{{ r_fill_form_error }}</li>
+						</ul>
+					<script type="text/javascript">
+						$(function () {
+							$('.err:not(.overAll)').hide();
+						});
+					</script>
+
+					</section>
+					{% endif %}
+
+					{% if register_form.username.errors %}
+					<section class="err">
+							{{register_form.username.errors }}
+					</section>
+					{% endif %}
+					{{ register_form.username }}
+
+					{% if register_form.email.errors %}
+					<section class="err">
+						{{register_form.email.errors }}</li>
+					</section>
+					{% endif %}
+						{{ register_form.email }}
+
+					{% if register_form.password.errors %}
+					<section class="err">
+						{{register_form.password.errors }}
+					</section>
+					{% elif register_form.non_field_errors %}
+					<section class="err">
+						{{register_form.non_field_errors}}</li>
+					</section>
+					{% endif %}
+						{{ register_form.password }}
+
+					{% if register_form.password_repeat.errors %}
+					<section class="err">
+						{{register_form.password_repeat.errors}}
+					</section>
+					{% endif %}
+						{{ register_form.password_repeat }}
+						<input type="submit" name="reg_sub" value="submit">
+				</form>
+				
+				<span>By clicking submit, you agree to riotry's 
+					<a href="index.html">terms and conditions.</a>
+				</span>
+		 	</section>	
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

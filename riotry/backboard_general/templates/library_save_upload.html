@@ -1,0 +1,75 @@
+{% extends "backb_base.html" %}
+
+{% block stylesheet %} {% endblock %}
+{% block title %}<title> riotry | library </title> {% endblock %}
+
+{% block top_utility %} 
+
+{%endblock%}
+
+{% block main_nav %}
+{% endblock %}
+
+{% block feature %}
+
+
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+			  <ul class="thumbnails">
+			  	<div class="well">
+			  		<li class="span3 thumbnail">
+
+			  			<img src="http://placehold.it/300x300" alt="">
+					    
+					    <div class="btn-group">
+						<a class="btn dropdown-toggle span12" data-toggle="dropdown" href="#matchup">
+							options  
+						    <span class="caret"></span>
+						  </a>
+						  
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="matchup">  
+						    <li><a tabindex="-1" href="#">use item</a></li> 
+						    <li><a tabindex="-1" href="#">tag item</a></li>
+						    <li><a tabindex="-1" href="#">categorize</a></li>
+						    <li><a tabindex="-1" href="#">delete</a></li>
+						  </ul>
+						</div> <!-- button group end-->
+						  <h5 class="span6 pull-right"> name </h5>
+
+			  		</li>
+			  		<div class="span3">
+			  			<input type="text" placeholder="title">
+			  		</div>
+			  		<div class="span8">
+			  			<textarea rows="3" placeholder="description"></textarea>
+			  		</div>
+			  	</div> <!--well-->
+			  </ul>
+			 
+			
+		</div><!--row-->
+		<div class="row">
+			<div class="span2 offset10">
+				<button class="btn btn-primary" type="submit"> save </button>
+			</div>
+		</div>
+	</div><!--container-->
+
+  </div>
+
+
+
+
+  
+
+
+		
+	</div>
+
+{# TOGGLES #}
+
+
+
+
+{% endblock %}

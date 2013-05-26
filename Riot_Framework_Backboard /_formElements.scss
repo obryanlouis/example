@@ -1,0 +1,157 @@
+
+
+@import "_tools";
+
+//FORM FARIABLES 
+//============================================
+//In between forms
+$primary-top-margin  : 8px;
+
+//============================================
+// @FORM GLOBALS 
+// ===========================================
+.fe-form-globals{
+	margin-top: $primary-top-margin;
+}
+
+
+
+// @INPUTS
+// ===========================================
+
+// ===========================================
+// @TITLE INPUT
+// ===========================================
+	
+	.fe-title-basic-input {
+		@extend .sg-title-basic-input;
+		padding-left: 5px;
+		margin: 0; 
+		@extend .fe-form-globals;
+	}
+
+// ===========================================
+// @BODY TEXTAREA
+// ===========================================
+	.fe-body-basic-textarea {
+
+		@extend .sg-body-basic-textarea;
+		//CREATE ME STYLE HERE SIR!
+		padding-left: 5px;
+		overflow: auto; 
+   		vertical-align: top; 
+   		font-size: 100%; 
+   		margin: 0; 
+    	vertical-align: baseline; 
+    	*vertical-align: middle; 
+    	resize: vertical;
+
+    	@extend .fe-form-globals;
+    	
+    	//save a border color in the SGuide
+    	//border-color: $primary-border-color;
+	}
+
+
+//============================================
+// SEARCH 
+// ===========================================
+
+.fe-search-basic-input {
+	@extend .fe-form-globals;
+	@extend .sg-basic-search-input;
+}
+
+//============================================
+// @BUTTONS 
+// ===========================================
+
+
+//button @BASIC
+.fe-basic-button {
+	@extend .sg-basic-button;
+}//HOVER
+.fe-basic-button-hover {
+	@extend .sg-basic-button-hover;
+}//ACTIVE
+.fe-basic-button-active {
+	 @extend .sg-basic-button-active;
+}
+
+
+//button @INVISIBLE @BASIC
+.fe-basic-invisible-button {
+	@extend .sg-basic-invisible-button; 
+	border:none;
+}//HOVER
+.fe-basic-invisible-button-hover {
+	@extend .sg-basic-invisible-button-hover;
+}
+
+//button @INVISIBLE @SQUARE
+.fe-basic-invisible-square-button {
+	@extend .fe-basic-invisible-button;
+	border: none;
+	height: 40px;	
+	width: 42px;
+}//HOVER
+.fe-basic-invisible-square-button-hover {
+	@extend .fe-basic-button-hover;
+}
+
+.fe-button-connection-small {
+	@include columns(2);
+}
+
+//============================================
+// FORM BUTTONS 
+// ===========================================
+
+//form @CANCEL BASIC
+.fe-form-cancel-button {
+	@extend .fe-form-globals;
+	@extend .sg-form-negative-basic-button;
+	height: 35px;
+
+}//HOVER
+.fe-form-cancel-button-hover { 
+	@extend .sg-form-negative-basic-button-hover;
+
+}//ACTIVE
+.fe-form-cancel-button-active { 
+	@extend .sg-form-negative-basic-button-active;
+}
+
+
+//form @SUBMIT BASIC  
+.fe-form-submit-button { 
+	@extend .fe-form-globals;
+	@extend .sg-form-positive-basic-button;
+	height: 35px;
+
+}//HOVER
+.fe-form-submit-button-hover{
+	@extend .sg-form-positive-basic-button-hover;
+
+}//ACTIVE 
+.fe-form-submit-button-active {
+	@extend .sg-form-positive-basic-button-active;
+}
+
+//============================================
+// EDIT BUTTONS 
+// ===========================================
+
+//TRIGER EDITS
+.fe-edit-trigger-button{
+	@extend .sg-edit-trigger-button;
+
+}
+
+
+
+
+
+
+
+
